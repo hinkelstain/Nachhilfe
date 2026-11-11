@@ -327,6 +327,15 @@ main {
   color: var(--state-sicher-text);
 }
 
+.hinweis-banner {
+  background: #fdf1e3;
+  border-color: #f0d6ae;
+  color: #6b4a1b;
+  font-size: 0.85rem;
+  margin-bottom: 1rem;
+  padding: 0.85rem 1.1rem;
+}
+
 .panel {
   background: var(--surface);
   border-radius: var(--radius);

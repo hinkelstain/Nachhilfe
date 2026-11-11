@@ -65,6 +65,32 @@ const CURRICULA = {
           arbeitsblaetter: ARBEITSBLAETTER_MATHE_4
         }
       }
+    },
+    mittelschule: {
+      "5": { mathematik: { label: "Mathematik", lehrplan: LEHRPLAN_MATHE_MS_5, arbeitsblaetter: [] } },
+      "6": { mathematik: { label: "Mathematik", lehrplan: LEHRPLAN_MATHE_MS_6, arbeitsblaetter: [] } },
+      "7": { mathematik: { label: "Mathematik", lehrplan: LEHRPLAN_MATHE_MS_7, arbeitsblaetter: [] } },
+      "8": { mathematik: { label: "Mathematik", lehrplan: LEHRPLAN_MATHE_MS_8, arbeitsblaetter: [] } },
+      "9": { mathematik: { label: "Mathematik", lehrplan: LEHRPLAN_MATHE_MS_9, arbeitsblaetter: [] } }
+    },
+    realschule: {
+      "5": { mathematik: { label: "Mathematik", lehrplan: LEHRPLAN_MATHE_RS_5, arbeitsblaetter: [] } },
+      "6": { mathematik: { label: "Mathematik", lehrplan: LEHRPLAN_MATHE_RS_6, arbeitsblaetter: [] } },
+      "7": { mathematik: { label: "Mathematik", lehrplan: LEHRPLAN_MATHE_RS_7, arbeitsblaetter: [] } },
+      "8": { mathematik: { label: "Mathematik", lehrplan: LEHRPLAN_MATHE_RS_8, arbeitsblaetter: [] } },
+      "9": { mathematik: { label: "Mathematik", lehrplan: LEHRPLAN_MATHE_RS_9, arbeitsblaetter: [] } },
+      "10": { mathematik: { label: "Mathematik", lehrplan: LEHRPLAN_MATHE_RS_10, arbeitsblaetter: [] } }
+    },
+    gymnasium: {
+      "5": { mathematik: { label: "Mathematik", lehrplan: LEHRPLAN_MATHE_GY_5, arbeitsblaetter: [] } },
+      "6": { mathematik: { label: "Mathematik", lehrplan: LEHRPLAN_MATHE_GY_6, arbeitsblaetter: [] } },
+      "7": { mathematik: { label: "Mathematik", lehrplan: LEHRPLAN_MATHE_GY_7, arbeitsblaetter: [] } },
+      "8": { mathematik: { label: "Mathematik", lehrplan: LEHRPLAN_MATHE_GY_8, arbeitsblaetter: [] } },
+      "9": { mathematik: { label: "Mathematik", lehrplan: LEHRPLAN_MATHE_GY_9, arbeitsblaetter: [] } },
+      "10": { mathematik: { label: "Mathematik", lehrplan: LEHRPLAN_MATHE_GY_10, arbeitsblaetter: [] } },
+      "11": { mathematik: { label: "Mathematik", lehrplan: LEHRPLAN_MATHE_GY_11, arbeitsblaetter: [] } },
+      "12": { mathematik: { label: "Mathematik", lehrplan: LEHRPLAN_MATHE_GY_12, arbeitsblaetter: [] } },
+      "13": { mathematik: { label: "Mathematik", lehrplan: LEHRPLAN_MATHE_GY_13, arbeitsblaetter: [] } }
     }
   }
 };

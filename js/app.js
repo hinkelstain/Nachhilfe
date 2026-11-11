@@ -211,6 +211,13 @@ function renderUebersichtTab(container) {
   const fachData = currentFachData();
   const lernbereiche = fachData.lehrplan.lernbereiche;
 
+  if (fachData.lehrplan.hinweis) {
+    const banner = document.createElement("div");
+    banner.className = "panel hinweis-banner";
+    banner.innerHTML = `<strong>Hinweis:</strong> ${fachData.lehrplan.hinweis}`;
+    container.appendChild(banner);
+  }
+
   if (!state.lernbereich) {
     // Listenansicht: nur Titel + Fortschritt, anklickbar
     if (lernbereiche.some((lb) => lb.zeitraum)) {
