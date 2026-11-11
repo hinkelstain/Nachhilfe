@@ -1,19 +1,30 @@
 // Inhalt: LehrplanPLUS Bayern, Mittelschule (Regelklasse), Mathematik, Jahrgangsstufe 5
 // Quelle: https://www.lehrplanplus.bayern.de/fachlehrplan/mittelschule/5/mathematik
+//
+// Zeitschätzung (Feld "zeitraum"): Der Mittelschul-Fachlehrplan nennt anders
+// als bei Realschule/Gymnasium keine Stundenzahl je Lernbereich. Die "ca."-
+// Zeiträume hier sind daher KEINE offizielle Lehrplan-Angabe, sondern eine
+// eigene grobe Schätzung auf Basis der amtlichen Stundentafel (5 Wochen-
+// stunden Mathematik in Jgst. 5, Anlage 1 zu § 11 MSO) verteilt nach der
+// Anzahl der Lernziele je Themenbereich. Bei mehreren Unterbereichen wird
+// derselbe Zeitraum anteilig weiter unterteilt.
 const LEHRPLAN_MATHE_MS_5 = {
   fach: "Mathematik",
   klasse: "5",
   bundesland: "Bayern",
   lehrplan: "LehrplanPLUS",
   quelle: "https://www.lehrplanplus.bayern.de/fachlehrplan/mittelschule/5/mathematik",
+  hinweis: "Die Zeitangaben (📅) sind hier eine grobe eigene Schätzung, keine offizielle Lehrplan-Vorgabe: Der Mittelschul-Lehrplan nennt – anders als bei Realschule und Gymnasium – keine Stundenzahl je Lernbereich. Grundlage ist die amtliche Stundentafel (5 Wochenstunden Mathematik in Jgst. 5) kombiniert mit der Anzahl der Lernziele je Themenbereich.",
   lernbereiche: [
     {
       id: "lb1",
       titel: "Natürliche Zahlen",
+      zeitraum: "ca. September/Oktober",
       teilbereiche: [
         {
           id: "lb1-1",
           titel: "Der Zahlenraum über eine Milliarde hinaus",
+          zeitraum: "ca. September",
           ziele: [
             "Große Zahlen über eine Milliarde lesen, schreiben und in verschiedenen Darstellungen erfassen",
             "Zahlen ordnen, vergleichen, zerlegen und in Schritten vor- und rückwärts zählen",
@@ -25,6 +36,7 @@ const LEHRPLAN_MATHE_MS_5 = {
         {
           id: "lb1-2",
           titel: "Grundrechenarten im Bereich der natürlichen Zahlen",
+          zeitraum: "ca. Oktober",
           ziele: [
             "Summen, Differenzen, Produkte und Quotienten im Kopf überschlagen und berechnen",
             "Grundrechenarten schriftlich und halbschriftlich sicher anwenden, Fachbegriffe richtig nutzen",
@@ -38,10 +50,12 @@ const LEHRPLAN_MATHE_MS_5 = {
     {
       id: "lb2",
       titel: "Ganze Zahlen",
+      zeitraum: "ca. November",
       teilbereiche: [
         {
           id: "lb2-1",
           titel: "Ganze Zahlen",
+          zeitraum: "ca. November",
           ziele: [
             "Alltagssituationen mit negativen Zahlen beschreiben (z. B. Minusgrade, Stockwerke unter dem Erdgeschoss)",
             "Positive und negative Zahlen am Zahlenstrahl ordnen und vergleichen",
@@ -55,10 +69,12 @@ const LEHRPLAN_MATHE_MS_5 = {
     {
       id: "lb3",
       titel: "Geometrische Figuren und Lagebeziehungen",
+      zeitraum: "ca. Dezember/Januar",
       teilbereiche: [
         {
           id: "lb3-1",
           titel: "Geometrische Figuren und Lagebeziehungen",
+          zeitraum: "ca. Dezember/Januar",
           ziele: [
             "Punkte und Figuren im Koordinatensystem (1. Quadrant) einzeichnen und ablesen",
             "Parallele und senkrechte Linien erkennen, zeichnen und beschreiben",
@@ -72,10 +88,12 @@ const LEHRPLAN_MATHE_MS_5 = {
     {
       id: "lb4",
       titel: "Flächeninhalt – Rechtecke",
+      zeitraum: "ca. Februar/März",
       teilbereiche: [
         {
           id: "lb4-1",
           titel: "Flächeninhalt – Rechtecke",
+          zeitraum: "ca. Februar/März",
           ziele: [
             "Flächeninhalte vergleichen, messen und schätzen (z. B. durch Auslegen)",
             "Flächeninhalt von Rechteck und Quadrat mit Einheitsquadraten begründen",
@@ -88,10 +106,12 @@ const LEHRPLAN_MATHE_MS_5 = {
     {
       id: "lb5",
       titel: "Größen im Alltag",
+      zeitraum: "ca. April",
       teilbereiche: [
         {
           id: "lb5-1",
           titel: "Größen im Alltag",
+          zeitraum: "ca. April",
           ziele: [
             "Größen (Länge, Volumen, Masse, Zeit, Geld) vergleichen und mit passenden Einheiten messen",
             "Alltagsgrößen mit Bezugsgrößen realistisch schätzen",
@@ -104,10 +124,12 @@ const LEHRPLAN_MATHE_MS_5 = {
     {
       id: "lb6",
       titel: "Daten",
+      zeitraum: "ca. Mai",
       teilbereiche: [
         {
           id: "lb6-1",
           titel: "Daten",
+          zeitraum: "ca. Mai",
           ziele: [
             "Daten aus eigenen Erhebungen (Umfragen, Zählungen) mit Strichlisten erfassen",
             "Daten in Tabellen und Diagrammen darstellen und daraus Zusammenhänge erkennen",
@@ -119,10 +141,12 @@ const LEHRPLAN_MATHE_MS_5 = {
     {
       id: "lb7",
       titel: "Gleichungen und Formeln",
+      zeitraum: "ca. Juni/Juli",
       teilbereiche: [
         {
           id: "lb7-1",
           titel: "Gleichungen und Formeln",
+          zeitraum: "ca. Juni/Juli",
           ziele: [
             "Zahlenrätsel sowie Aufgaben zu Umfang und Fläche von Quadrat und Rechteck durch systematisches Probieren und Umkehraufgaben lösen, um erste Erfahrungen mit Variablen zu sammeln"
           ]

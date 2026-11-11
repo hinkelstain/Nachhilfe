@@ -427,6 +427,42 @@ main {
 
 .teilbereich-card li { margin-bottom: 0.25rem; }
 
+.ziel-link {
+  display: block;
+  width: 100%;
+  background: none;
+  border: none;
+  font: inherit;
+  color: inherit;
+  text-align: left;
+  padding: 0.1rem 0;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.ziel-link:hover,
+.ziel-link:focus-visible {
+  color: var(--primary-dark);
+  text-decoration: underline;
+  text-decoration-color: var(--accent);
+}
+
+.ziel-kontext {
+  margin: 0 0 0.4rem;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.ziel-panel .step-title { margin: 0 0 1rem; }
+
+.ziel-panel .status-btn { margin-bottom: 1rem; }
+
+.ziel-placeholder {
+  margin: 0;
+  border-top: 1px dashed var(--border);
+  padding-top: 0.9rem;
+}
+
 .teilbereich-hidden { display: none; }
 
 .teilbereich-toggle {

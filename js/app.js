@@ -14,7 +14,8 @@ const state = {
   klassenstufe: null,
   fach: null,
   tab: "uebersicht",
-  lernbereich: null // gewählter Lernbereich im Drilldown (null = Liste)
+  lernbereich: null, // gewählter Lernbereich im Drilldown (null = Liste)
+  ziel: null // gewähltes Lernziel-Detail: {lb, tb, i} oder null
 };
 
 function scopePrefix() {
@@ -26,6 +27,7 @@ function resetTo(level) {
   if (level === "klassenstufe") { state.klassenstufe = null; state.fach = null; }
   if (level === "fach") { state.fach = null; }
   state.lernbereich = null;
+  state.ziel = null;
   state.tab = "uebersicht";
   navigate();
 }
@@ -41,7 +43,8 @@ function snapshotState() {
     klassenstufe: state.klassenstufe,
     fach: state.fach,
     tab: state.tab,
-    lernbereich: state.lernbereich
+    lernbereich: state.lernbereich,
+    ziel: state.ziel
   };
 }
 
@@ -69,12 +72,13 @@ function selectAndIgnite(cardEl, changes) {
 }
 
 window.addEventListener("popstate", (e) => {
-  const s = e.state || { schulart: null, klassenstufe: null, fach: null, tab: "uebersicht", lernbereich: null };
+  const s = e.state || { schulart: null, klassenstufe: null, fach: null, tab: "uebersicht", lernbereich: null, ziel: null };
   state.schulart = s.schulart;
   state.klassenstufe = s.klassenstufe;
   state.fach = s.fach;
   state.tab = s.tab;
   state.lernbereich = s.lernbereich;
+  state.ziel = s.ziel || null;
   render();
 });
 
@@ -220,7 +224,7 @@ function renderFachApp(app) {
 function initTabNav() {
   document.querySelectorAll("#tabs button").forEach((btn) => {
     btn.classList.toggle("active", btn.dataset.target === state.tab);
-    btn.onclick = () => { state.tab = btn.dataset.target; state.lernbereich = null; navigate(); };
+    btn.onclick = () => { state.tab = btn.dataset.target; state.lernbereich = null; state.ziel = null; navigate(); };
   });
 }
 
@@ -250,6 +254,11 @@ function renderUebersichtTab(container) {
     banner.className = "panel hinweis-banner";
     banner.innerHTML = `<strong>Hinweis:</strong> ${fachData.lehrplan.hinweis}`;
     container.appendChild(banner);
+  }
+
+  if (state.ziel) {
+    renderZielDetail(container, lernbereiche);
+    return;
   }
 
   if (!state.lernbereich) {
@@ -303,15 +312,28 @@ function renderUebersichtTab(container) {
     const card = document.createElement("div");
     card.className = "teilbereich-card";
     if (idx >= TEILBEREICHE_PREVIEW) card.classList.add("teilbereich-hidden");
-    const zieleHtml = tb.ziele.map((z) => `<li>${z}</li>`).join("");
+    const tbZeitraumHtml = tb.zeitraum
+      ? `<span class="zeitraum-chip" title="Grober Richtwert, keine verbindliche Vorgabe">📅 ${tb.zeitraum}</span>`
+      : "";
+    const zieleHtml = tb.ziele
+      .map((z, zi) => `<li><button class="ziel-link" data-lb="${lb.id}" data-tb="${tb.id}" data-zi="${zi}">${z}</button></li>`)
+      .join("");
     card.innerHTML = `
       <h3>${tb.titel}</h3>
+      ${tbZeitraumHtml}
       <ul>${zieleHtml}</ul>
       <button class="status-btn" data-id="${tb.id}"></button>
     `;
     grid.appendChild(card);
   });
   container.appendChild(grid);
+
+  grid.querySelectorAll(".ziel-link").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      state.ziel = { lb: btn.dataset.lb, tb: btn.dataset.tb, i: Number(btn.dataset.zi) };
+      navigate();
+    });
+  });
 
   const hiddenCount = lb.teilbereiche.length - TEILBEREICHE_PREVIEW;
   if (hiddenCount > 0) {
@@ -339,6 +361,47 @@ function renderUebersichtTab(container) {
 function updateStatusButton(btn, statusValue) {
   btn.dataset.state = statusValue;
   btn.textContent = STATE_LABELS[statusValue];
+}
+
+// ---------- Detailseite für ein einzelnes Lernziel ----------
+function renderZielDetail(container, lernbereiche) {
+  const { lb: lbId, tb: tbId, i } = state.ziel;
+  const lb = lernbereiche.find((l) => l.id === lbId);
+  const tb = lb && lb.teilbereiche.find((t) => t.id === tbId);
+  const zielText = tb && tb.ziele[i];
+
+  const back = document.createElement("button");
+  back.className = "back-link";
+  back.textContent = `← Zurück zu „${tb ? tb.titel : "Übersicht"}“`;
+  back.addEventListener("click", () => { state.ziel = null; navigate(); });
+  container.appendChild(back);
+
+  if (!lb || !tb || zielText == null) {
+    const msg = document.createElement("p");
+    msg.className = "hint";
+    msg.textContent = "Dieses Lernziel wurde nicht gefunden.";
+    container.appendChild(msg);
+    return;
+  }
+
+  const zielId = `${tb.id}-z${i + 1}`;
+  const panel = document.createElement("div");
+  panel.className = "panel ziel-panel";
+  panel.innerHTML = `
+    <p class="ziel-kontext">${lb.titel} · ${tb.titel}</p>
+    <h2 class="step-title">${zielText}</h2>
+    <button class="status-btn" data-id="${zielId}"></button>
+    <p class="hint ziel-placeholder">Hier können später z. B. passende Arbeitsblätter oder Übungen genau zu diesem Lernziel ergänzt werden.</p>
+  `;
+  container.appendChild(panel);
+
+  const btn = panel.querySelector(".status-btn");
+  updateStatusButton(btn, getStatus(zielId));
+  btn.addEventListener("click", () => {
+    const next = STATE_CYCLE[(STATE_CYCLE.indexOf(getStatus(zielId)) + 1) % STATE_CYCLE.length];
+    setStatus(zielId, next);
+    updateStatusButton(btn, next);
+  });
 }
 
 // ---------- Tab: Arbeitsblätter ----------
