@@ -5,6 +5,8 @@
 const CURRICULA = {
   schularten: [
     { id: "grundschule", label: "Grundschule" },
+    { id: "hauptschule", label: "Hauptschule" },
+    { id: "realschule", label: "Realschule" },
     { id: "gymnasium", label: "Gymnasium" }
   ],
 
@@ -13,6 +15,22 @@ const CURRICULA = {
       { id: "1", label: "1. Klasse" },
       { id: "2", label: "2. Klasse" },
       { id: "3-4", label: "3./4. Klasse" }
+    ],
+    hauptschule: [
+      { id: "5", label: "5. Klasse" },
+      { id: "6", label: "6. Klasse" },
+      { id: "7", label: "7. Klasse" },
+      { id: "8", label: "8. Klasse" },
+      { id: "9", label: "9. Klasse" },
+      { id: "10", label: "10. Klasse" }
+    ],
+    realschule: [
+      { id: "5", label: "5. Klasse" },
+      { id: "6", label: "6. Klasse" },
+      { id: "7", label: "7. Klasse" },
+      { id: "8", label: "8. Klasse" },
+      { id: "9", label: "9. Klasse" },
+      { id: "10", label: "10. Klasse" }
     ],
     gymnasium: [
       { id: "5", label: "5. Klasse" },
