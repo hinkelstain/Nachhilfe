@@ -17,8 +17,38 @@ function resetTo(level) {
   if (level === "fach") { state.fach = null; }
   state.lernbereich = null;
   state.tab = "uebersicht";
+  navigate();
+}
+
+// ---------- Navigation / Browser-Verlauf ----------
+// Jeder "echte" Navigationsschritt (Schulart/Klasse/Fach wählen, Tab
+// wechseln, Lernbereich öffnen/schließen) legt einen eigenen Einstieg im
+// Browser-Verlauf an. So führt die Zurück-Taste des Browsers innerhalb der
+// App einen Schritt zurück, statt die Seite komplett zu verlassen.
+function snapshotState() {
+  return {
+    schulart: state.schulart,
+    klassenstufe: state.klassenstufe,
+    fach: state.fach,
+    tab: state.tab,
+    lernbereich: state.lernbereich
+  };
+}
+
+function navigate() {
+  history.pushState(snapshotState(), "", "");
   render();
 }
+
+window.addEventListener("popstate", (e) => {
+  const s = e.state || { schulart: null, klassenstufe: null, fach: null, tab: "uebersicht", lernbereich: null };
+  state.schulart = s.schulart;
+  state.klassenstufe = s.klassenstufe;
+  state.fach = s.fach;
+  state.tab = s.tab;
+  state.lernbereich = s.lernbereich;
+  render();
+});
 
 function currentFachData() {
   const faecher = getFaecher(state.schulart, state.klassenstufe);
@@ -83,7 +113,7 @@ function renderSchulartAuswahl(app) {
     const card = document.createElement("button");
     card.className = "choice-card";
     card.textContent = s.label;
-    card.addEventListener("click", () => { state.schulart = s.id; render(); });
+    card.addEventListener("click", () => { state.schulart = s.id; navigate(); });
     grid.appendChild(card);
   });
   wrap.appendChild(grid);
@@ -100,7 +130,7 @@ function renderKlassenstufeAuswahl(app) {
     const card = document.createElement("button");
     card.className = "choice-card";
     card.textContent = k.label;
-    card.addEventListener("click", () => { state.klassenstufe = k.id; render(); });
+    card.addEventListener("click", () => { state.klassenstufe = k.id; navigate(); });
     grid.appendChild(card);
   });
   wrap.appendChild(grid);
@@ -126,7 +156,7 @@ function renderFachAuswahl(app) {
       const card = document.createElement("button");
       card.className = "choice-card";
       card.textContent = faecher[id].label;
-      card.addEventListener("click", () => { state.fach = id; render(); });
+      card.addEventListener("click", () => { state.fach = id; navigate(); });
       grid.appendChild(card);
     });
     wrap.appendChild(grid);
@@ -153,7 +183,7 @@ function renderFachApp(app) {
 function initTabNav() {
   document.querySelectorAll("#tabs button").forEach((btn) => {
     btn.classList.toggle("active", btn.dataset.target === state.tab);
-    btn.onclick = () => { state.tab = btn.dataset.target; state.lernbereich = null; render(); };
+    btn.onclick = () => { state.tab = btn.dataset.target; state.lernbereich = null; navigate(); };
   });
 }
 
@@ -191,7 +221,7 @@ function renderUebersichtTab(container) {
         <div class="progress-track"><div class="progress-fill" style="width:${pct}%"></div></div>
         <span class="progress-label">${pct}% · ${lb.teilbereiche.length} Themen</span>
       `;
-      card.addEventListener("click", () => { state.lernbereich = lb.id; render(); });
+      card.addEventListener("click", () => { state.lernbereich = lb.id; navigate(); });
       grid.appendChild(card);
     });
     container.appendChild(grid);
@@ -203,7 +233,7 @@ function renderUebersichtTab(container) {
   const back = document.createElement("button");
   back.className = "back-link";
   back.textContent = "← Zurück zur Übersicht";
-  back.addEventListener("click", () => { state.lernbereich = null; render(); });
+  back.addEventListener("click", () => { state.lernbereich = null; navigate(); });
   container.appendChild(back);
 
   const heading = document.createElement("h2");
@@ -357,5 +387,6 @@ function initUebung() {
 
 // ---------- Start ----------
 document.addEventListener("DOMContentLoaded", () => {
+  history.replaceState(snapshotState(), "", "");
   render();
 });
