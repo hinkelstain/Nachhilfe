@@ -1,3 +1,13 @@
+// ---------- Icons für die Schulart-Auswahl ----------
+// Platzhalter-Icons (einfache Strichzeichnungen). Werden ersetzt, sobald
+// eigene Bilder vorliegen - siehe setSchulartImage() weiter unten.
+const SCHULART_ICONS = {
+  grundschule: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 L6.5 19.5 L17.5 19.5 Z"/><path d="M8.3 9.5 L15.7 9.5"/><path d="M6.5 19.5 Q12 16.8 17.5 19.5"/><path d="M12 3 L13.6 1.7"/></svg>`,
+  mittelschule: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20 L11 13"/><circle cx="12.4" cy="11.6" r="1.1" fill="currentColor" stroke="none"/><path d="M13 5 a2.3 2.3 0 1 0 4.6 0 a2.3 2.3 0 1 0 -4.6 0 Z"/><path d="M14.3 7.6 L20 13.3 L18.3 15 L12.6 9.3"/></svg>`,
+  realschule: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.5 L12 6"/><path d="M12 6 L7 19.5 L9.3 19.5"/><path d="M12 6 L17 19.5 L14.7 19.5"/><circle cx="12" cy="4.6" r="1.4"/></svg>`,
+  gymnasium: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 9.5 L12 5 L21.5 9.5 L12 14 Z"/><path d="M6.5 11.5 L6.5 16 Q12 18.3 17.5 16 L17.5 11.5"/><path d="M21.5 9.5 L21.5 14.5"/></svg>`
+};
+
 // ---------- App-Zustand ----------
 const state = {
   schulart: null,
@@ -38,6 +48,24 @@ function snapshotState() {
 function navigate() {
   history.pushState(snapshotState(), "", "");
   render();
+}
+
+// Kurzes "Aufleuchten" einer Auswahl-Kachel, bevor zum nächsten Schritt
+// gewechselt wird. Respektiert die Betriebssystem-Einstellung für
+// reduzierte Bewegung (prefers-reduced-motion).
+function selectAndIgnite(cardEl, changes) {
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (reduceMotion) {
+    Object.assign(state, changes);
+    navigate();
+    return;
+  }
+  cardEl.disabled = true;
+  cardEl.classList.add("is-igniting");
+  setTimeout(() => {
+    Object.assign(state, changes);
+    navigate();
+  }, 420);
 }
 
 window.addEventListener("popstate", (e) => {
@@ -112,9 +140,15 @@ function renderSchulartAuswahl(app) {
   grid.className = "choice-grid";
   CURRICULA.schularten.forEach((s) => {
     const card = document.createElement("button");
-    card.className = "choice-card";
-    card.textContent = s.label;
-    card.addEventListener("click", () => { state.schulart = s.id; navigate(); });
+    card.className = "choice-card schulart-card";
+    card.innerHTML = `
+      <span class="schulart-icon" data-schulart="${s.id}">
+        ${SCHULART_ICONS[s.id] || ""}
+        <img src="images/schulart-${s.id}.png" alt="" onerror="this.style.display='none'">
+      </span>
+      <span class="choice-label">${s.label}</span>
+    `;
+    card.addEventListener("click", () => selectAndIgnite(card, { schulart: s.id }));
     grid.appendChild(card);
   });
   wrap.appendChild(grid);
@@ -132,7 +166,7 @@ function renderKlassenstufeAuswahl(app) {
     const card = document.createElement("button");
     card.className = "choice-card";
     card.textContent = k.label;
-    card.addEventListener("click", () => { state.klassenstufe = k.id; navigate(); });
+    card.addEventListener("click", () => selectAndIgnite(card, { klassenstufe: k.id }));
     grid.appendChild(card);
   });
   wrap.appendChild(grid);
@@ -159,7 +193,7 @@ function renderFachAuswahl(app) {
       const card = document.createElement("button");
       card.className = "choice-card";
       card.textContent = faecher[id].label;
-      card.addEventListener("click", () => { state.fach = id; navigate(); });
+      card.addEventListener("click", () => selectAndIgnite(card, { fach: id }));
       grid.appendChild(card);
     });
     wrap.appendChild(grid);
