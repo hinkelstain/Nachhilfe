@@ -296,11 +296,13 @@ function renderUebersichtTab(container) {
   heading.textContent = lb.titel;
   container.appendChild(heading);
 
+  const TEILBEREICHE_PREVIEW = 3;
   const grid = document.createElement("div");
   grid.className = "teilbereich-grid";
-  lb.teilbereiche.forEach((tb) => {
+  lb.teilbereiche.forEach((tb, idx) => {
     const card = document.createElement("div");
     card.className = "teilbereich-card";
+    if (idx >= TEILBEREICHE_PREVIEW) card.classList.add("teilbereich-hidden");
     const zieleHtml = tb.ziele.map((z) => `<li>${z}</li>`).join("");
     card.innerHTML = `
       <h3>${tb.titel}</h3>
@@ -310,6 +312,18 @@ function renderUebersichtTab(container) {
     grid.appendChild(card);
   });
   container.appendChild(grid);
+
+  const hiddenCount = lb.teilbereiche.length - TEILBEREICHE_PREVIEW;
+  if (hiddenCount > 0) {
+    const toggle = document.createElement("button");
+    toggle.className = "back-link teilbereich-toggle";
+    toggle.textContent = `+ ${hiddenCount} weitere Unterbereiche anzeigen`;
+    toggle.addEventListener("click", () => {
+      grid.querySelectorAll(".teilbereich-hidden").forEach((el) => el.classList.remove("teilbereich-hidden"));
+      toggle.remove();
+    });
+    container.appendChild(toggle);
+  }
 
   container.querySelectorAll(".status-btn").forEach((btn) => {
     const id = btn.dataset.id;
