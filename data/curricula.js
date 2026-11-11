@@ -51,6 +51,13 @@ const CURRICULA = {
   // faecher[schulart][klassenstufe] = { fachId: { label, lehrplan, arbeitsblaetter } }
   faecher: {
     grundschule: {
+      "1-2": {
+        mathematik: {
+          label: "Mathematik",
+          lehrplan: LEHRPLAN_MATHE_1_2,
+          arbeitsblaetter: []
+        }
+      },
       "3-4": {
         mathematik: {
           label: "Mathematik",

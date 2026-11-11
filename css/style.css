@@ -99,10 +99,26 @@ header.site-header {
   color: var(--primary-dark);
 }
 
+.choice-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+  text-align: center;
+}
+
+.choice-screen .step-title {
+  font-size: 1.5rem;
+  margin-bottom: 1.75rem;
+}
+
 .choice-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-  gap: 0.9rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.25rem;
+  max-width: 900px;
 }
 
 .choice-card {
@@ -110,9 +126,14 @@ header.site-header {
   border: 1px solid var(--border);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
-  padding: 1.5rem 1rem;
-  font-size: 1.05rem;
-  font-weight: 600;
+  min-width: 220px;
+  min-height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem 2rem;
+  font-size: 1.3rem;
+  font-weight: 700;
   color: var(--primary-dark);
   cursor: pointer;
   text-align: center;
@@ -148,9 +169,19 @@ header.site-header {
 .lernbereich-card:hover { border-color: var(--primary); }
 
 .lernbereich-card h2 {
-  margin: 0 0 0.75rem;
+  margin: 0 0 0.5rem;
   font-size: 1.05rem;
   color: var(--primary-dark);
+}
+
+.zeitraum-chip {
+  display: inline-block;
+  font-size: 0.78rem;
+  color: var(--accent);
+  background: #fdf1e3;
+  padding: 0.15rem 0.6rem;
+  border-radius: 999px;
+  margin-bottom: 0.75rem;
 }
 
 .back-link {

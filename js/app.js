@@ -106,6 +106,7 @@ function addCrumb(container, label, onClick) {
 // ---------- Schritt 1: Schulart ----------
 function renderSchulartAuswahl(app) {
   const wrap = document.createElement("div");
+  wrap.className = "choice-screen";
   wrap.innerHTML = `<h2 class="step-title">Welche Schulart?</h2>`;
   const grid = document.createElement("div");
   grid.className = "choice-grid";
@@ -123,6 +124,7 @@ function renderSchulartAuswahl(app) {
 // ---------- Schritt 2: Klassenstufe ----------
 function renderKlassenstufeAuswahl(app) {
   const wrap = document.createElement("div");
+  wrap.className = "choice-screen";
   wrap.innerHTML = `<h2 class="step-title">Welche Klassenstufe?</h2>`;
   const grid = document.createElement("div");
   grid.className = "choice-grid";
@@ -140,6 +142,7 @@ function renderKlassenstufeAuswahl(app) {
 // ---------- Schritt 3: Fach ----------
 function renderFachAuswahl(app) {
   const wrap = document.createElement("div");
+  wrap.className = "choice-screen";
   wrap.innerHTML = `<h2 class="step-title">Welches Fach?</h2>`;
   const faecher = getFaecher(state.schulart, state.klassenstufe);
   const ids = Object.keys(faecher);
@@ -210,14 +213,25 @@ function renderUebersichtTab(container) {
 
   if (!state.lernbereich) {
     // Listenansicht: nur Titel + Fortschritt, anklickbar
+    if (lernbereiche.some((lb) => lb.zeitraum)) {
+      const hint = document.createElement("p");
+      hint.className = "hint";
+      hint.style.marginBottom = "1rem";
+      hint.textContent = "📅 = ungefährer Richtwert, wann dieser Themenbereich laut Lehrplan dran sein könnte (grobe Schätzung, keine verbindliche Vorgabe).";
+      container.appendChild(hint);
+    }
     const grid = document.createElement("div");
     grid.className = "lernbereich-grid";
     lernbereiche.forEach((lb) => {
       const pct = lernbereichProgress(lb);
       const card = document.createElement("button");
       card.className = "lernbereich-card";
+      const zeitraumHtml = lb.zeitraum
+        ? `<span class="zeitraum-chip" title="Grober Richtwert auf Basis der im Lehrplan angegebenen Stundenzahl, keine verbindliche Vorgabe">📅 ${lb.zeitraum}</span>`
+        : "";
       card.innerHTML = `
         <h2>${lb.titel}</h2>
+        ${zeitraumHtml}
         <div class="progress-track"><div class="progress-fill" style="width:${pct}%"></div></div>
         <span class="progress-label">${pct}% · ${lb.teilbereiche.length} Themen</span>
       `;
