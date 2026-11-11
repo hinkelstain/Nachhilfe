@@ -1,0 +1,133 @@
+// Inhalt: LehrplanPLUS Bayern, Mittelschule (Regelklasse), Mathematik, Jahrgangsstufe 5
+// Quelle: https://www.lehrplanplus.bayern.de/fachlehrplan/mittelschule/5/mathematik
+const LEHRPLAN_MATHE_MS_5 = {
+  fach: "Mathematik",
+  klasse: "5",
+  bundesland: "Bayern",
+  lehrplan: "LehrplanPLUS",
+  quelle: "https://www.lehrplanplus.bayern.de/fachlehrplan/mittelschule/5/mathematik",
+  lernbereiche: [
+    {
+      id: "lb1",
+      titel: "Natürliche Zahlen",
+      teilbereiche: [
+        {
+          id: "lb1-1",
+          titel: "Der Zahlenraum über eine Milliarde hinaus",
+          ziele: [
+            "Große Zahlen über eine Milliarde lesen, schreiben und in verschiedenen Darstellungen erfassen",
+            "Zahlen ordnen, vergleichen, zerlegen und in Schritten vor- und rückwärts zählen",
+            "Zahlenfolgen mit gleicher Rechenoperation erkennen, fortsetzen und selbst bilden",
+            "Große Anzahlen schätzen und sinnvoll runden, Vorgehen begründen",
+            "Infos aus Zahlenstrahl, Diagrammen und Schaubildern entnehmen und auswerten"
+          ]
+        },
+        {
+          id: "lb1-2",
+          titel: "Grundrechenarten im Bereich der natürlichen Zahlen",
+          ziele: [
+            "Summen, Differenzen, Produkte und Quotienten im Kopf überschlagen und berechnen",
+            "Grundrechenarten schriftlich und halbschriftlich sicher anwenden, Fachbegriffe richtig nutzen",
+            "Ergebnisse durch Überschlag und Umkehraufgaben prüfen, Fehler erkennen und korrigieren",
+            "Rechengesetze (Punkt vor Strich, Klammern, Kommutativ-/Assoziativgesetz) für Rechenvorteile nutzen",
+            "Sachsituationen in Rechnungen übersetzen, lösen und den Lösungsweg erklären"
+          ]
+        }
+      ]
+    },
+    {
+      id: "lb2",
+      titel: "Ganze Zahlen",
+      teilbereiche: [
+        {
+          id: "lb2-1",
+          titel: "Ganze Zahlen",
+          ziele: [
+            "Alltagssituationen mit negativen Zahlen beschreiben (z. B. Minusgrade, Stockwerke unter dem Erdgeschoss)",
+            "Positive und negative Zahlen am Zahlenstrahl ordnen und vergleichen",
+            "Zustandsänderungen mit Pfeilen oder am Thermometer darstellen",
+            "Zustand (Vorzeichen) und Veränderung (Rechenzeichen) unterscheiden",
+            "Einfache Sachaufgaben mit ganzen Zahlen lösen und Ergebnisse auf Plausibilität prüfen"
+          ]
+        }
+      ]
+    },
+    {
+      id: "lb3",
+      titel: "Geometrische Figuren und Lagebeziehungen",
+      teilbereiche: [
+        {
+          id: "lb3-1",
+          titel: "Geometrische Figuren und Lagebeziehungen",
+          ziele: [
+            "Punkte und Figuren im Koordinatensystem (1. Quadrant) einzeichnen und ablesen",
+            "Parallele und senkrechte Linien erkennen, zeichnen und beschreiben",
+            "Winkel erkennen, mit dem Geodreieck zeichnen und messen (spitz, recht, stumpf, gestreckt)",
+            "Umfänge von Dreiecken, Vierecken und zusammengesetzten Figuren berechnen",
+            "Sachaufgaben zum Umfang lösen, Längeneinheiten (mm bis m) sicher umrechnen"
+          ]
+        }
+      ]
+    },
+    {
+      id: "lb4",
+      titel: "Flächeninhalt – Rechtecke",
+      teilbereiche: [
+        {
+          id: "lb4-1",
+          titel: "Flächeninhalt – Rechtecke",
+          ziele: [
+            "Flächeninhalte vergleichen, messen und schätzen (z. B. durch Auslegen)",
+            "Flächeninhalt von Rechteck und Quadrat mit Einheitsquadraten begründen",
+            "Flächeninhalte von Rechtecken, Quadraten und zusammengesetzten Figuren berechnen",
+            "Flächeneinheiten (mm² bis m²) sicher verwenden und umrechnen"
+          ]
+        }
+      ]
+    },
+    {
+      id: "lb5",
+      titel: "Größen im Alltag",
+      teilbereiche: [
+        {
+          id: "lb5-1",
+          titel: "Größen im Alltag",
+          ziele: [
+            "Größen (Länge, Volumen, Masse, Zeit, Geld) vergleichen und mit passenden Einheiten messen",
+            "Alltagsgrößen mit Bezugsgrößen realistisch schätzen",
+            "Sachaufgaben zu Größen lösen, Einheiten umrechnen und sinnvoll runden",
+            "Einfache Brüche (¼, ½, ¾ …) und Kommaschreibweise bei Geld- und Längenangaben nutzen"
+          ]
+        }
+      ]
+    },
+    {
+      id: "lb6",
+      titel: "Daten",
+      teilbereiche: [
+        {
+          id: "lb6-1",
+          titel: "Daten",
+          ziele: [
+            "Daten aus eigenen Erhebungen (Umfragen, Zählungen) mit Strichlisten erfassen",
+            "Daten in Tabellen und Diagrammen darstellen und daraus Zusammenhänge erkennen",
+            "Informationen aus Datendarstellungen entnehmen und zur Beantwortung von Fragen nutzen"
+          ]
+        }
+      ]
+    },
+    {
+      id: "lb7",
+      titel: "Gleichungen und Formeln",
+      teilbereiche: [
+        {
+          id: "lb7-1",
+          titel: "Gleichungen und Formeln",
+          ziele: [
+            "Zahlenrätsel sowie Aufgaben zu Umfang und Fläche von Quadrat und Rechteck durch systematisches Probieren und Umkehraufgaben lösen, um erste Erfahrungen mit Variablen zu sammeln"
+          ]
+        }
+      ]
+    }
+  ]
+};
