@@ -56,6 +56,7 @@ const LEHRPLAN_GESCHICHTE_RS_7 = {
         {
           id: "lb2-1",
           titel: "Königtum, Kirche und Gesellschaft im Mittelalter",
+          zeitraum: "ca. September",
           ziele: [
             "Entstehung des ostfränkisch-deutschen Königtums unter den Ottonen erklären",
             "Grundherrschaft und Lehnswesen als Ordnungsprinzipien des Mittelalters beschreiben",
@@ -66,6 +67,7 @@ const LEHRPLAN_GESCHICHTE_RS_7 = {
         {
           id: "lb2-2",
           titel: "Leben, Glauben und Kultur im Mittelalter",
+          zeitraum: "ca. Oktober/November",
           ziele: [
             "Alltag und Werte von Rittern sowie das Leben auf einer Burg beschreiben",
             "Romanische und gotische Baukunst an Beispielen unterscheiden",
@@ -85,6 +87,7 @@ const LEHRPLAN_GESCHICHTE_RS_7 = {
         {
           id: "lb3-1",
           titel: "Renaissance, Humanismus und Buchdruck",
+          zeitraum: "ca. Dezember",
           ziele: [
             "Grundgedanken von Renaissance und Humanismus erläutern",
             "Bedeutung des Buchdrucks für die Verbreitung von Wissen und Ideen einschätzen",
@@ -94,6 +97,7 @@ const LEHRPLAN_GESCHICHTE_RS_7 = {
         {
           id: "lb3-2",
           titel: "Entdeckungsfahrten und die islamische Welt",
+          zeitraum: "ca. Januar",
           ziele: [
             "Motive und Verlauf europäischer Entdeckungsfahrten (u. a. Kolumbus) erklären",
             "Begegnung mit den Reichen der Azteken, Inka und Maya und deren Folgen beurteilen",
@@ -130,6 +134,7 @@ const LEHRPLAN_GESCHICHTE_RS_7 = {
         {
           id: "lb5-1",
           titel: "Der Dreißigjährige Krieg",
+          zeitraum: "ca. März",
           ziele: [
             "Ursachen des Dreißigjährigen Krieges aus religiösen und politischen Motiven erklären",
             "Verlauf und europäische Dimension des Krieges in Grundzügen beschreiben",
@@ -139,6 +144,7 @@ const LEHRPLAN_GESCHICHTE_RS_7 = {
         {
           id: "lb5-2",
           titel: "Absolutismus am Beispiel Frankreichs",
+          zeitraum: "ca. April",
           ziele: [
             "Herrschaftsanspruch und Selbstverständnis Ludwigs XIV. als absolutistischer Herrscher erläutern",
             "Barocke Repräsentation von Macht (u. a. Schloss Versailles) deuten",

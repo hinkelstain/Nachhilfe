@@ -93,6 +93,7 @@ const LEHRPLAN_GESCHICHTE_RS_6 = {
         {
           id: "lb4-1",
           titel: "Poleis, Kolonisation und das Leben der Griechen",
+          zeitraum: "ca. Dezember",
           ziele: [
             "Landschaft Griechenlands und die Entstehung der Poleis (Stadtstaaten) erklären",
             "Gründe und Folgen der griechischen Kolonisation beschreiben, auch im Vergleich zu heutiger Migration",
@@ -102,6 +103,7 @@ const LEHRPLAN_GESCHICHTE_RS_6 = {
         {
           id: "lb4-2",
           titel: "Attische Demokratie, Perserkriege und Sparta",
+          zeitraum: "ca. Dezember",
           ziele: [
             "Entstehung der attischen Demokratie und ihren Zusammenhang mit den Perserkriegen erklären",
             "Blütezeit Athens unter Perikles einordnen",
@@ -118,6 +120,7 @@ const LEHRPLAN_GESCHICHTE_RS_6 = {
         {
           id: "lb5-1",
           titel: "Von der Republik zum Kaiserreich",
+          zeitraum: "ca. Januar",
           ziele: [
             "Gründung Roms und Aufstieg zur Weltmacht im Überblick darstellen",
             "Übergang von der Republik zum Prinzipat (Caesar, Augustus) erklären",
@@ -127,6 +130,7 @@ const LEHRPLAN_GESCHICHTE_RS_6 = {
         {
           id: "lb5-2",
           titel: "Leben und Glauben im Römischen Reich",
+          zeitraum: "ca. Februar",
           ziele: [
             "Leben in der Stadt Rom und den Alltag einer römischen Familie beschreiben",
             "Herrschaft in den Provinzen und die Romanisierung (auch in Bayern) erklären",
@@ -143,6 +147,7 @@ const LEHRPLAN_GESCHICHTE_RS_6 = {
         {
           id: "lb6-1",
           titel: "Das Ende des Römischen Reiches",
+          zeitraum: "ca. März",
           ziele: [
             "„Völkerwanderung“ und Ursachen für den Zerfall des Römischen Reiches erklären",
             "Dreiteilung der Mittelmeerwelt nach dem Ende Roms beschreiben",
@@ -152,6 +157,7 @@ const LEHRPLAN_GESCHICHTE_RS_6 = {
         {
           id: "lb6-2",
           titel: "Die Franken, der Islam und Karl der Große",
+          zeitraum: "ca. April",
           ziele: [
             "Reichsbildung der Franken nachvollziehen",
             "Ausbreitung des Islam und ihre Bedeutung für die Mittelmeerwelt einordnen",
