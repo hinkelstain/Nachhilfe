@@ -14,7 +14,6 @@ const LEHRPLAN_MATHE_MS_5 = {
   bundesland: "Bayern",
   lehrplan: "LehrplanPLUS",
   quelle: "https://www.lehrplanplus.bayern.de/fachlehrplan/mittelschule/5/mathematik",
-  hinweis: "Die Zeitangaben (📅) sind hier eine grobe eigene Schätzung, keine offizielle Lehrplan-Vorgabe: Der Mittelschul-Lehrplan nennt – anders als bei Realschule und Gymnasium – keine Stundenzahl je Lernbereich. Grundlage ist die amtliche Stundentafel (5 Wochenstunden Mathematik in Jgst. 5) kombiniert mit der Anzahl der Lernziele je Themenbereich.",
   lernbereiche: [
     {
       id: "lb1",
