@@ -23,6 +23,7 @@ const LEHRPLAN_MATHE_RS_8 = {
         {
           id: "lb1-1",
           titel: "Vierecke",
+          zeitraum: "ca. September/Oktober",
           ziele: [
             "Trapez, Drachenviereck, Parallelogramm, Raute, Rechteck und Quadrat an ihren Eigenschaften unterscheiden",
             "Vierecke konstruieren, auch mit Geometriesoftware, und ihre Eigenschaften zum Lösen von Aufgaben nutzen"
@@ -38,6 +39,7 @@ const LEHRPLAN_MATHE_RS_8 = {
         {
           id: "lb2-1",
           titel: "Drehung",
+          zeitraum: "ca. September/Oktober",
           ziele: [
             "Drehung als Kongruenzabbildung erkennen und ihre Eigenschaften beschreiben",
             "Punktspiegelung als Sonderfall der Drehung erkennen",
@@ -56,6 +58,7 @@ const LEHRPLAN_MATHE_RS_8 = {
         {
           id: "lb3-1",
           titel: "Raumgeometrie",
+          zeitraum: "ca. Oktober/November",
           ziele: [
             "Symmetrische Körper erkennen und Symmetrieebenen, -achsen und -zentren bestimmen",
             "Axialschnitte von Rotationskörpern zeichnen bzw. skizzieren",
@@ -72,6 +75,7 @@ const LEHRPLAN_MATHE_RS_8 = {
         {
           id: "lb4-1",
           titel: "Terme, Gleichungen und Ungleichungen",
+          zeitraum: "ca. Dezember/Januar",
           ziele: [
             "Komplexere Terme vereinfachen, auch mit mehreren Variablen und binomischen Formeln",
             "Extremwerte quadratischer Terme bestimmen, z. B. bei Flächenberechnungen",
@@ -89,6 +93,7 @@ const LEHRPLAN_MATHE_RS_8 = {
         {
           id: "lb5-1",
           titel: "Bruchterme und Bruchgleichungen",
+          zeitraum: "ca. Januar/Februar",
           ziele: [
             "Terme mit Variablen im Nenner als Bruchterme erkennen",
             "Die Definitionsmenge von Bruchtermen bestimmen",
@@ -105,6 +110,7 @@ const LEHRPLAN_MATHE_RS_8 = {
         {
           id: "lb6-1",
           titel: "Funktionen",
+          zeitraum: "ca. Februar/März",
           ziele: [
             "Funktionale Zusammenhänge beschreiben und von nicht eindeutigen Zuordnungen unterscheiden",
             "Funktionen durch Gleichung, Term, Graph, Wertetabelle und Text darstellen",
@@ -125,6 +131,7 @@ const LEHRPLAN_MATHE_RS_8 = {
         {
           id: "lb7-1",
           titel: "Daten und Zufall",
+          zeitraum: "ca. März/April",
           ziele: [
             "Ergebnisse von Zufallsexperimenten darstellen (Baumdiagramm, Vierfeldertafel)",
             "Absolute und relative Häufigkeiten von Ereignissen ermitteln, z. B. um Gewinnchancen einzuschätzen"

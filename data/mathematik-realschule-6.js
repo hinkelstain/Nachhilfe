@@ -18,6 +18,7 @@ const LEHRPLAN_MATHE_RS_6 = {
         {
           id: "lb1-1",
           titel: "Rationale Zahlen",
+          zeitraum: "ca. November/Dezember",
           ziele: [
             "Situationen mit Brüchen erkennen und beschreiben",
             "Brüche deuten (Zähler, Nenner, echte, unechte, gemischte Brüche)",
@@ -39,6 +40,7 @@ const LEHRPLAN_MATHE_RS_6 = {
         {
           id: "lb2-1",
           titel: "Achsenspiegelung und Symmetrie",
+          zeitraum: "ca. Januar/Februar",
           ziele: [
             "Achsenspiegelung als Kongruenzabbildung erkennen (Längen und Winkel bleiben gleich)",
             "Punkte und Figuren spiegeln, auch mit Geometriesoftware",
@@ -57,6 +59,7 @@ const LEHRPLAN_MATHE_RS_6 = {
         {
           id: "lb3-1",
           titel: "Flächeninhalt ebener Figuren",
+          zeitraum: "ca. Februar/März",
           ziele: [
             "Flächen von Dreieck, Parallelogramm, Trapez, Drachen und Raute berechnen",
             "Passende Höhen in Figuren bestimmen",
@@ -74,6 +77,7 @@ const LEHRPLAN_MATHE_RS_6 = {
         {
           id: "lb4-1",
           titel: "Raumgeometrie",
+          zeitraum: "ca. März/April",
           ziele: [
             "Rauminhalte mit Einheitswürfeln bestimmen und Einheiten umrechnen",
             "Volumen von Quadern, Würfeln und zusammengesetzten Körpern berechnen"
@@ -89,6 +93,7 @@ const LEHRPLAN_MATHE_RS_6 = {
         {
           id: "lb5-1",
           titel: "Terme und Gleichungen",
+          zeitraum: "ca. April/Mai",
           ziele: [
             "Terme mit Variablen nutzen, um Sachzusammenhänge zu beschreiben",
             "Terme in Wertetabellen, Skizzen und Texten darstellen",
@@ -108,6 +113,7 @@ const LEHRPLAN_MATHE_RS_6 = {
         {
           id: "lb6-1",
           titel: "Direkte Proportionalität",
+          zeitraum: "ca. Mai/Juni",
           ziele: [
             "Zuordnungen beschreiben (Tabellen, Graphen, Alltagsbeispiele)",
             "Direkt proportionale Zuordnungen erkennen und begründen",

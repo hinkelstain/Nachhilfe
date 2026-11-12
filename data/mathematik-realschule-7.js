@@ -24,6 +24,7 @@ const LEHRPLAN_MATHE_RS_7 = {
         {
           id: "lb1-1",
           titel: "Potenzen",
+          zeitraum: "ca. September/Oktober",
           ziele: [
             "Potenzen mit negativen ganzzahligen Exponenten berechnen",
             "Potenzgesetze geschickt anwenden, besonders bei Termen mit Variablen",
@@ -40,6 +41,7 @@ const LEHRPLAN_MATHE_RS_7 = {
         {
           id: "lb2-1",
           titel: "Parallelverschiebung",
+          zeitraum: "ca. Oktober/November",
           ziele: [
             "Parallelverschiebung als Kongruenzabbildung erkennen und ihre Eigenschaften beschreiben",
             "Punkte und Figuren mit der Abbildungsvorschrift verschieben, auch mit Geometriesoftware",
@@ -59,6 +61,7 @@ const LEHRPLAN_MATHE_RS_7 = {
         {
           id: "lb3-1",
           titel: "Dreiecke",
+          zeitraum: "ca. November/Dezember",
           ziele: [
             "Existenz von Dreiecken anhand von Seitenlängen und Winkeln prüfen",
             "Dreiecke konstruieren (Zirkel, Geodreieck, Geometriesoftware)",
@@ -76,6 +79,7 @@ const LEHRPLAN_MATHE_RS_7 = {
         {
           id: "lb4-1",
           titel: "Raumgeometrie",
+          zeitraum: "ca. Dezember/Januar",
           ziele: [
             "Lage von Geraden und Ebenen im Raum beschreiben (auch Winkel dazwischen)",
             "Schrägbilder von Prismen und Pyramiden zeichnen",
@@ -92,6 +96,7 @@ const LEHRPLAN_MATHE_RS_7 = {
         {
           id: "lb5-1",
           titel: "Geometrische Ortslinien und Ortsbereiche",
+          zeitraum: "ca. Dezember/Januar",
           ziele: [
             "Ortslinien zeichnen und ihre Eigenschaften beschreiben (Kreislinie, Mittelsenkrechte, Winkelhalbierende, Thaleskreis)",
             "Lage von Kreis und Gerade unterscheiden, Tangenten konstruieren",
@@ -109,6 +114,7 @@ const LEHRPLAN_MATHE_RS_7 = {
         {
           id: "lb6-1",
           titel: "Terme, Gleichungen und Ungleichungen",
+          zeitraum: "ca. Januar/Februar",
           ziele: [
             "Terme zusammenfassen und auf Äquivalenz prüfen (mit Potenzgesetzen)",
             "Gleichungen der Form ax + b = c mit Äquivalenzumformungen lösen",
@@ -126,6 +132,7 @@ const LEHRPLAN_MATHE_RS_7 = {
         {
           id: "lb7-1",
           titel: "Proportionalitäten",
+          zeitraum: "ca. März/April",
           ziele: [
             "Prozentrechnung im Alltag anwenden (z. B. Preise ohne MwSt., Preisänderungen)",
             "Zinsrechnung anwenden (Kapital, Zinssatz, Zinsen)",
@@ -144,6 +151,7 @@ const LEHRPLAN_MATHE_RS_7 = {
         {
           id: "lb8-1",
           titel: "Auswertung von Daten",
+          zeitraum: "ca. März/April",
           ziele: [
             "Mittelwert, Zentralwert, Modalwert und Spannweite ermitteln",
             "Daten mit diesen Kenngrößen interpretieren",

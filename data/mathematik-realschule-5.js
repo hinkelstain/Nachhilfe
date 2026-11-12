@@ -18,6 +18,7 @@ const LEHRPLAN_MATHE_RS_5 = {
         {
           id: "lb1-1",
           titel: "Natürliche Zahlen im Dezimalsystem",
+          zeitraum: "ca. Oktober/November",
           ziele: [
             "Natürliche Zahlen als unendliche Zahlenmenge verstehen (es gibt keine größte Zahl)",
             "Große Zahlen mit Stufenzahlen im Stellenwertsystem darstellen",
@@ -28,6 +29,7 @@ const LEHRPLAN_MATHE_RS_5 = {
         {
           id: "lb1-2",
           titel: "Andere Zahlensysteme",
+          zeitraum: "ca. Oktober/November",
           ziele: [
             "Zahlen zwischen Dezimalsystem und anderen Systemen umwandeln (z. B. Dualsystem, römische Zahlen)",
             "Vor- und Nachteile verschiedener Zahlensysteme vergleichen"
@@ -36,6 +38,7 @@ const LEHRPLAN_MATHE_RS_5 = {
         {
           id: "lb1-3",
           titel: "Grundrechenarten und Rechengesetze",
+          zeitraum: "ca. Oktober/November",
           ziele: [
             "Schriftliche Addition, Subtraktion, Multiplikation und Division sicher anwenden",
             "Sachaufgaben lösen und Rechenwege auf Plausibilität prüfen",
@@ -48,6 +51,7 @@ const LEHRPLAN_MATHE_RS_5 = {
         {
           id: "lb1-4",
           titel: "Kombinatorik",
+          zeitraum: "ca. Oktober/November",
           ziele: [
             "Anzahl von Möglichkeiten systematisch bestimmen, z. B. mit Baumdiagramm oder Tabelle"
           ]
@@ -62,6 +66,7 @@ const LEHRPLAN_MATHE_RS_5 = {
         {
           id: "lb2-1",
           titel: "Ganze Zahlen",
+          zeitraum: "ca. Dezember/Januar",
           ziele: [
             "Erklären, warum man negative Zahlen braucht (z. B. Temperaturen, Kontostand)",
             "Begriffe Gegenzahl, Vorzeichen und Betrag richtig verwenden",
@@ -81,6 +86,7 @@ const LEHRPLAN_MATHE_RS_5 = {
         {
           id: "lb3-1",
           titel: "Geometrische Grundvorstellungen und Grundbegriffe",
+          zeitraum: "ca. Februar/März",
           ziele: [
             "Grundbegriffe wie Punkt, Strecke, Gerade, Kreis, Radius, Durchmesser sicher verwenden",
             "Lage von Geraden beschreiben (parallel, senkrecht, schneidend)",
@@ -101,6 +107,7 @@ const LEHRPLAN_MATHE_RS_5 = {
         {
           id: "lb4-1",
           titel: "Größen",
+          zeitraum: "ca. März/April",
           ziele: [
             "Maßzahl und Maßeinheit unterscheiden, passende Einheiten wählen, Größen schätzen",
             "Einheiten umrechnen (Geld, Masse, Länge, Zeit, Hohlmaß)",
@@ -120,6 +127,7 @@ const LEHRPLAN_MATHE_RS_5 = {
         {
           id: "lb5-1",
           titel: "Umfang und Flächeninhalt ebener Figuren",
+          zeitraum: "ca. April/Mai",
           ziele: [
             "Umfang von Rechtecken und Quadraten berechnen (und umgekehrt)",
             "Umfang von Vielecken berechnen, z. B. für eine Grundstücks-Einzäunung",
@@ -139,6 +147,7 @@ const LEHRPLAN_MATHE_RS_5 = {
         {
           id: "lb6-1",
           titel: "Auswertung von Daten",
+          zeitraum: "ca. Mai/Juni",
           ziele: [
             "Infos aus Strichlisten, Diagrammen, Tabellen und Texten entnehmen",
             "Zu Diagrammen und Tabellen passende Fragen stellen und beantworten",

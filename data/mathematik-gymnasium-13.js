@@ -16,6 +16,7 @@ const LEHRPLAN_MATHE_GY_13 = {
         {
           id: "lb1-1",
           titel: "Flächeninhalt und bestimmtes Integral",
+          zeitraum: "ca. September/Oktober",
           ziele: [
             "Das bestimmte Integral als Flächenbilanz deuten",
             "Den Hauptsatz der Differential- und Integralrechnung anwenden",
@@ -35,6 +36,7 @@ const LEHRPLAN_MATHE_GY_13 = {
         {
           id: "lb2-1",
           titel: "Normalverteilung",
+          zeitraum: "ca. Oktober/November",
           ziele: [
             "Diskrete und stetige Zufallsgrößen unterscheiden",
             "Dichte- und Verteilungsfunktion normalverteilter Zufallsgrößen erläutern",
@@ -52,6 +54,7 @@ const LEHRPLAN_MATHE_GY_13 = {
         {
           id: "lb3-1",
           titel: "Geraden und Ebenen im Raum",
+          zeitraum: "ca. November/Dezember",
           ziele: [
             "Geraden- und Ebenengleichungen in Parameterform aufstellen",
             "Ebenen in Normalen- und Koordinatenform aufstellen",
@@ -70,6 +73,7 @@ const LEHRPLAN_MATHE_GY_13 = {
         {
           id: "lb4-1",
           titel: "Anwendungen der Differential- und Integralrechnung",
+          zeitraum: "ca. Dezember/Januar",
           ziele: [
             "Verknüpfte Funktionen, auch mit Parametern, untersuchen",
             "Parameterwerte aus gegebenen Bedingungen bestimmen",

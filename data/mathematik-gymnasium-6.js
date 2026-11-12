@@ -15,6 +15,7 @@ const LEHRPLAN_MATHE_GY_6 = {
         {
           id: "lb1-1",
           titel: "Bruchteile und Bruchzahlen",
+          zeitraum: "ca. September",
           ziele: [
             "Brüche als Anteile deuten und mit Flächenbildern veranschaulichen",
             "Brüche erweitern, kürzen und vergleichen (auch mit Hauptnenner)",
@@ -25,6 +26,7 @@ const LEHRPLAN_MATHE_GY_6 = {
         {
           id: "lb1-2",
           titel: "Dezimalbrüche",
+          zeitraum: "ca. Oktober",
           ziele: [
             "Stellenwerttafel um Zehntel, Hundertstel usw. erweitern",
             "Dezimalbrüche runden",
@@ -35,6 +37,7 @@ const LEHRPLAN_MATHE_GY_6 = {
         {
           id: "lb1-3",
           titel: "Addition und Subtraktion rationaler Zahlen",
+          zeitraum: "ca. November",
           ziele: [
             "Brüche, gemischte Zahlen und Dezimalbrüche addieren und subtrahieren",
             "Rechenvorteile nutzen, Terme mit Klammern berechnen",
@@ -44,6 +47,7 @@ const LEHRPLAN_MATHE_GY_6 = {
         {
           id: "lb1-4",
           titel: "Multiplikation und Division rationaler Zahlen",
+          zeitraum: "ca. Dezember",
           ziele: [
             "Brüche und Dezimalbrüche multiplizieren und dividieren",
             "Potenzen mit rationalen Basen berechnen",
@@ -53,6 +57,7 @@ const LEHRPLAN_MATHE_GY_6 = {
         {
           id: "lb1-5",
           titel: "Verbindung der Grundrechenarten bei rationalen Zahlen",
+          zeitraum: "ca. Januar",
           ziele: [
             "Termstrukturen erkennen und berechnen",
             "Rechenvorteile (Distributivgesetz) gezielt nutzen",
@@ -69,6 +74,7 @@ const LEHRPLAN_MATHE_GY_6 = {
         {
           id: "lb2-1",
           titel: "Flächeninhalt",
+          zeitraum: "ca. Februar",
           ziele: [
             "Flächenformeln für Parallelogramm, Dreieck und Trapez herleiten",
             "Formeln flexibel anwenden, Näherungswerte bestimmen",
@@ -78,6 +84,7 @@ const LEHRPLAN_MATHE_GY_6 = {
         {
           id: "lb2-2",
           titel: "Volumen",
+          zeitraum: "ca. März",
           ziele: [
             "Die Quaderformel für das Volumen herleiten und anwenden",
             "Volumeneinheiten umrechnen (auch Liter/Milliliter)",
@@ -94,6 +101,7 @@ const LEHRPLAN_MATHE_GY_6 = {
         {
           id: "lb3-1",
           titel: "Prozentrechnung, Daten und Diagramme",
+          zeitraum: "ca. März/April",
           ziele: [
             "Rabatt- und Zinsaufgaben mit Grundgleichung oder Dreisatz lösen",
             "Prozentangaben in Texten kritisch prüfen (Prozent vs. Prozentpunkte)",

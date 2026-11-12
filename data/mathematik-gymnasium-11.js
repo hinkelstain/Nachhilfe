@@ -16,6 +16,7 @@ const LEHRPLAN_MATHE_GY_11 = {
         {
           id: "lb1-1",
           titel: "Spezielle Eigenschaften von Funktionen",
+          zeitraum: "ca. September/Oktober",
           ziele: [
             "Charakteristische Funktionstypen und ihre Graphen beschreiben",
             "Grenzverhalten für x → ±∞ erläutern (Konvergenz/Divergenz)",
@@ -34,6 +35,7 @@ const LEHRPLAN_MATHE_GY_11 = {
         {
           id: "lb2-1",
           titel: "Gebrochen-rationale Funktionen – Grenzwerte und Asymptoten",
+          zeitraum: "ca. Oktober/November",
           ziele: [
             "Definitionsmenge und Nullstellen bestimmen",
             "Waagrechte und schräge Asymptoten bestimmen",
@@ -51,6 +53,7 @@ const LEHRPLAN_MATHE_GY_11 = {
         {
           id: "lb3-1",
           titel: "Bedingte Wahrscheinlichkeit und stochastische Unabhängigkeit",
+          zeitraum: "ca. November/Dezember",
           ziele: [
             "Bedingte Wahrscheinlichkeiten mit Baumdiagrammen und Vierfeldertafeln bestimmen",
             "P_B(A), P_A(B) und P(A∩B) unterscheiden (z. B. bei medizinischen Tests)",
@@ -68,6 +71,7 @@ const LEHRPLAN_MATHE_GY_11 = {
         {
           id: "lb4-1",
           titel: "Lokales und globales Differenzieren",
+          zeitraum: "ca. Dezember/Januar",
           ziele: [
             "Differenzenquotient als Sekantensteigung deuten",
             "Differentialquotient als Tangentensteigung verstehen",
@@ -79,6 +83,7 @@ const LEHRPLAN_MATHE_GY_11 = {
         {
           id: "lb4-2",
           titel: "Anwendung der Differentialrechnung bei ganzrationalen Funktionen",
+          zeitraum: "ca. Februar/März",
           ziele: [
             "Mit der 1. Ableitung Monotonie und Extremstellen bestimmen",
             "Mit der 2. Ableitung Krümmung und Wendestellen bestimmen",

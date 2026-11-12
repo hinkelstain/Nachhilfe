@@ -15,6 +15,7 @@ const LEHRPLAN_MATHE_GY_5 = {
         {
           id: "lb1-1",
           titel: "Natürliche Zahlen und ihre Erweiterung zu den ganzen Zahlen",
+          zeitraum: "ca. September",
           ziele: [
             "Große natürliche Zahlen lesen, schreiben und am Zahlenstrahl einordnen",
             "Das dezimale Stellenwertsystem verstehen und vom römischen Zahlensystem abgrenzen",
@@ -27,6 +28,7 @@ const LEHRPLAN_MATHE_GY_5 = {
         {
           id: "lb1-2",
           titel: "Addition und Subtraktion ganzer Zahlen",
+          zeitraum: "ca. Oktober",
           ziele: [
             "Schriftliche Rechenverfahren auf große Zahlen anwenden, Ergebnisse überschlagen",
             "Mit positiven und negativen Zahlen addieren und subtrahieren (Guthaben/Schulden-Modell)",
@@ -45,6 +47,7 @@ const LEHRPLAN_MATHE_GY_5 = {
         {
           id: "lb2-1",
           titel: "Geometrische Figuren und Lagebeziehungen",
+          zeitraum: "ca. Oktober/November",
           ziele: [
             "Punkte, Strecken, Geraden und Kreise im Koordinatensystem darstellen",
             "Lage von Punkten, Geraden und Kreisen zueinander beschreiben (parallel, senkrecht, Abstand, Tangente)",
@@ -63,6 +66,7 @@ const LEHRPLAN_MATHE_GY_5 = {
         {
           id: "lb3-1",
           titel: "Multiplikation und Division ganzer Zahlen",
+          zeitraum: "ca. Januar",
           ziele: [
             "Schriftlich multiplizieren und dividieren, auch mit mehrstelligen Zahlen",
             "Zahlen in Primfaktoren zerlegen, Teilbarkeitsregeln anwenden",
@@ -75,6 +79,7 @@ const LEHRPLAN_MATHE_GY_5 = {
         {
           id: "lb3-2",
           titel: "Verbindung der Grundrechenarten bei ganzen Zahlen",
+          zeitraum: "ca. Januar",
           ziele: [
             "Terme mit mehreren Rechenarten und Klammern strukturiert auswerten (Punkt vor Strich)",
             "Rechenvorteile durch Ausklammern/Ausmultiplizieren nutzen",
@@ -92,6 +97,7 @@ const LEHRPLAN_MATHE_GY_5 = {
         {
           id: "lb4-1",
           titel: "Geld, Länge, Masse und Zeit",
+          zeitraum: "ca. März",
           ziele: [
             "Größen in andere Einheiten umrechnen (auch mit Komma)",
             "Mit Größen rechnen: addieren, subtrahieren, vervielfachen, teilen",
@@ -103,6 +109,7 @@ const LEHRPLAN_MATHE_GY_5 = {
         {
           id: "lb4-2",
           titel: "Flächeninhalt",
+          zeitraum: "ca. April",
           ziele: [
             "Flächenformel für das Rechteck herleiten und anwenden",
             "Flächeneinheiten umrechnen (mm² bis km², a, ha)",

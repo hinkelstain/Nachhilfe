@@ -15,6 +15,7 @@ const LEHRPLAN_MATHE_GY_8 = {
         {
           id: "lb1-1",
           titel: "Funktion und Term",
+          zeitraum: "ca. September",
           ziele: [
             "Funktionale Zusammenhänge mit Tabellen, Diagrammen und Termen beschreiben",
             "Verstehen, was eine Funktion ist (eindeutige Zuordnung)",
@@ -31,6 +32,7 @@ const LEHRPLAN_MATHE_GY_8 = {
         {
           id: "lb2-1",
           titel: "Lineare Funktionen",
+          zeitraum: "ca. September bis November",
           ziele: [
             "Geraden der Form y = m·x + t deuten und zeichnen",
             "Geradengleichungen berechnen, Nullstellen und Schnittpunkte bestimmen",
@@ -49,6 +51,7 @@ const LEHRPLAN_MATHE_GY_8 = {
         {
           id: "lb3-1",
           titel: "Elementare gebrochen-rationale Funktionen",
+          zeitraum: "ca. November/Dezember",
           ziele: [
             "Definitionsmenge und Achsenschnittpunkte bestimmen",
             "Graphen mit Asymptoten zeichnen",
@@ -65,6 +68,7 @@ const LEHRPLAN_MATHE_GY_8 = {
         {
           id: "lb4-1",
           titel: "Bruchterme und Bruchgleichungen",
+          zeitraum: "ca. Dezember/Januar",
           ziele: [
             "Bruchterme erweitern und kürzen",
             "Bruchterme addieren, subtrahieren, multiplizieren, dividieren",
@@ -83,6 +87,7 @@ const LEHRPLAN_MATHE_GY_8 = {
         {
           id: "lb5-1",
           titel: "Laplace-Experimente",
+          zeitraum: "ca. Januar bis März",
           ziele: [
             "Zufallsexperimente von deterministischen Vorgängen unterscheiden",
             "Relative Häufigkeiten bestimmen, Gesetz der großen Zahlen verstehen",
@@ -100,6 +105,7 @@ const LEHRPLAN_MATHE_GY_8 = {
         {
           id: "lb6-1",
           titel: "Lineare Gleichungssysteme",
+          zeitraum: "ca. März/April",
           ziele: [
             "Sachverhalte mit linearen Gleichungssystemen beschreiben",
             "Systeme mit zwei Unbekannten graphisch und rechnerisch lösen",
@@ -117,6 +123,7 @@ const LEHRPLAN_MATHE_GY_8 = {
         {
           id: "lb7-1",
           titel: "Kreis und Zylinder",
+          zeitraum: "ca. April/Mai",
           ziele: [
             "Formeln für Kreisumfang und Kreisfläche anwenden, π näherungsweise bestimmen",
             "Prismen und Kreiszylinder zeichnen, beschreiben und Netze erstellen",

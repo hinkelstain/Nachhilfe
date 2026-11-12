@@ -16,6 +16,7 @@ const LEHRPLAN_MATHE_GY_12 = {
         {
           id: "lb1-1",
           titel: "Ganzrationale Funktionen mit Parametern",
+          zeitraum: "ca. September",
           ziele: [
             "Funktionenscharen mit Methoden der Differentialrechnung untersuchen",
             "Stammfunktionen ganzrationaler Funktionen bestimmen"
@@ -24,6 +25,7 @@ const LEHRPLAN_MATHE_GY_12 = {
         {
           id: "lb1-2",
           titel: "Natürliche Exponentialfunktion",
+          zeitraum: "ca. Oktober",
           ziele: [
             "e^x als Funktion mit sich selbst als Ableitung verstehen",
             "Verknüpfungen mit ganzrationalen Funktionen mit Produkt- und Kettenregel ableiten",
@@ -34,6 +36,7 @@ const LEHRPLAN_MATHE_GY_12 = {
         {
           id: "lb1-3",
           titel: "Sinus- und Kosinusfunktion",
+          zeitraum: "ca. November",
           ziele: [
             "Ableitungen von Sinus und Kosinus graphisch plausibel machen",
             "Einfache Verknüpfungen mit linearen Funktionen untersuchen"
@@ -49,6 +52,7 @@ const LEHRPLAN_MATHE_GY_12 = {
         {
           id: "lb2-1",
           titel: "Zufallsgrößen und Binomialverteilung",
+          zeitraum: "ca. November/Dezember",
           ziele: [
             "Wahrscheinlichkeitsbegriffe (Laplace, frequentistisch, subjektiv) vergleichen",
             "Erwartungswert, Varianz und Standardabweichung bestimmen und deuten",
@@ -66,6 +70,7 @@ const LEHRPLAN_MATHE_GY_12 = {
         {
           id: "lb3-1",
           titel: "Einseitiger Signifikanztest bei binomialverteilten Merkmalen",
+          zeitraum: "ca. Dezember",
           ziele: [
             "Vorgehen eines einseitigen Signifikanztests an einem Beispiel beschreiben",
             "Fehler 1. Art und Fehler 2. Art berechnen",
@@ -83,6 +88,7 @@ const LEHRPLAN_MATHE_GY_12 = {
         {
           id: "lb4-1",
           titel: "Gebrochen-rationale Funktionen",
+          zeitraum: "ca. Dezember",
           ziele: [
             "Gebrochen-rationale Funktionen mit der Quotientenregel ableiten und untersuchen",
             "Verknüpfungen bekannter Funktionstypen untersuchen"
@@ -91,6 +97,7 @@ const LEHRPLAN_MATHE_GY_12 = {
         {
           id: "lb4-2",
           titel: "Wurzelfunktion",
+          zeitraum: "ca. Januar",
           ziele: [
             "Umkehrbarkeit über strenge Monotonie begründen",
             "Graphen von Funktion und Umkehrfunktion vergleichen",
@@ -100,6 +107,7 @@ const LEHRPLAN_MATHE_GY_12 = {
         {
           id: "lb4-3",
           titel: "Natürliche Logarithmusfunktion",
+          zeitraum: "ca. Februar",
           ziele: [
             "ln als Umkehrfunktion von e^x verstehen und ihre Ableitung herleiten",
             "Logarithmengesetze zur Untersuchung einfacher Verknüpfungen nutzen"
@@ -115,6 +123,7 @@ const LEHRPLAN_MATHE_GY_12 = {
         {
           id: "lb5-1",
           titel: "Grundlagen der Koordinatengeometrie im Raum",
+          zeitraum: "ca. Februar/März",
           ziele: [
             "Punkte, Figuren und Körper im 3D-Koordinatensystem darstellen",
             "Vektoren im Raum addieren, subtrahieren und skalar multiplizieren",

@@ -15,6 +15,7 @@ const LEHRPLAN_MATHE_GY_10 = {
         {
           id: "lb1-1",
           titel: "Exponentielles Wachstum und Logarithmus",
+          zeitraum: "ca. September/Oktober",
           ziele: [
             "Exponentielles von linearem Wachstum unterscheiden",
             "Graphen der Form b·aˣ untersuchen",
@@ -33,6 +34,7 @@ const LEHRPLAN_MATHE_GY_10 = {
         {
           id: "lb2-1",
           titel: "Zusammengesetzte Zufallsexperimente und stochastische Simulationen",
+          zeitraum: "ca. Oktober bis Dezember",
           ziele: [
             "Zusammengesetzte Zufallsexperimente mit Baumdiagrammen strukturieren",
             "Pfadregeln zur Wahrscheinlichkeitsberechnung nutzen",
@@ -50,6 +52,7 @@ const LEHRPLAN_MATHE_GY_10 = {
         {
           id: "lb3-1",
           titel: "Sinus- und Kosinusfunktion",
+          zeitraum: "ca. Dezember/Januar",
           ziele: [
             "Bogenmaß als Winkelmaß verstehen und in Gradmaß umrechnen",
             "Sinus- und Kosinuswerte am Einheitskreis bestimmen",
@@ -68,6 +71,7 @@ const LEHRPLAN_MATHE_GY_10 = {
         {
           id: "lb4-1",
           titel: "Ganzrationale Funktionen",
+          zeitraum: "ca. Januar bis März",
           ziele: [
             "Ganzrationale Funktionen als Summe von Potenzfunktionen verstehen",
             "Nullstellen und deren Vielfachheit bestimmen",
@@ -85,6 +89,7 @@ const LEHRPLAN_MATHE_GY_10 = {
         {
           id: "lb5-1",
           titel: "Fortführung der Raumgeometrie",
+          zeitraum: "ca. März bis Mai",
           ziele: [
             "Schrägbilder und Netze von Pyramiden und Kegeln zeichnen",
             "Zylinder, Kegel und Kugel als Rotationskörper verstehen",

@@ -15,6 +15,7 @@ const LEHRPLAN_MATHE_GY_9 = {
         {
           id: "lb1-1",
           titel: "Quadratwurzeln",
+          zeitraum: "ca. September/Oktober",
           ziele: [
             "Quadratwurzeln definieren und Werte bestimmen",
             "Irrationalität von √2 nachvollziehen (indirekter Beweis)",
@@ -32,6 +33,7 @@ const LEHRPLAN_MATHE_GY_9 = {
         {
           id: "lb2-1",
           titel: "Quadratische Funktionen und quadratische Gleichungen",
+          zeitraum: "ca. Oktober/November",
           ziele: [
             "Einfluss der Parameter a, d und e auf die Parabel beschreiben",
             "Scheitelpunkt aus dem Term bestimmen",
@@ -43,6 +45,7 @@ const LEHRPLAN_MATHE_GY_9 = {
         {
           id: "lb2-2",
           titel: "Quadratische Funktionen in Anwendungen",
+          zeitraum: "ca. Dezember",
           ziele: [
             "Lineare Gleichungssysteme mit drei Unbekannten lösen (z. B. für Parabel-Koeffizienten)",
             "Bruchgleichungen lösen, die auf quadratische Gleichungen führen",
@@ -59,6 +62,7 @@ const LEHRPLAN_MATHE_GY_9 = {
         {
           id: "lb3-1",
           titel: "Wahrscheinlichkeit verknüpfter Ereignisse",
+          zeitraum: "ca. Januar",
           ziele: [
             "Verknüpfte Ereignisse mit Mengendiagrammen und Vierfeldertafeln darstellen",
             "Die Formel P(A∪B) = P(A) + P(B) − P(A∩B) begründen und anwenden"
@@ -74,6 +78,7 @@ const LEHRPLAN_MATHE_GY_9 = {
         {
           id: "lb4-1",
           titel: "Ähnlichkeit und Strahlensatz",
+          zeitraum: "ca. Januar/Februar",
           ziele: [
             "Ähnlichkeit von Figuren erklären und prüfen",
             "Strahlensätze in Sachsituationen anwenden",
@@ -90,6 +95,7 @@ const LEHRPLAN_MATHE_GY_9 = {
         {
           id: "lb5-1",
           titel: "Potenzfunktionen und Erweiterung des Potenzbegriffs",
+          zeitraum: "ca. Februar/März",
           ziele: [
             "Graphen von a·xⁿ beschreiben",
             "Allgemeine Wurzeln definieren, Gleichungen xⁿ = c lösen",
@@ -106,6 +112,7 @@ const LEHRPLAN_MATHE_GY_9 = {
         {
           id: "lb6-1",
           titel: "Satz des Pythagoras",
+          zeitraum: "ca. März",
           ziele: [
             "Den Satz des Pythagoras beweisen",
             "Den Satz von seiner Umkehrung unterscheiden",
@@ -122,6 +129,7 @@ const LEHRPLAN_MATHE_GY_9 = {
         {
           id: "lb7-1",
           titel: "Trigonometrie am rechtwinkligen Dreieck",
+          zeitraum: "ca. März/April",
           ziele: [
             "Begründen, dass die Innenwinkel alle Seitenverhältnisse festlegen",
             "Sinus, Kosinus und Tangens zur Dreiecksberechnung anwenden",
@@ -131,6 +139,7 @@ const LEHRPLAN_MATHE_GY_9 = {
         {
           id: "lb7-2",
           titel: "Sinus- und Kosinussatz",
+          zeitraum: "ca. Mai",
           ziele: [
             "Sinus- und Kosinuswerte am Einheitskreis für 0°–360° bestimmen",
             "Den Sinussatz beweisen und anwenden",

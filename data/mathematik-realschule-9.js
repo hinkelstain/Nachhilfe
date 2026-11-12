@@ -23,6 +23,7 @@ const LEHRPLAN_MATHE_RS_9 = {
         {
           id: "lb1-1",
           titel: "Reelle Zahlen",
+          zeitraum: "ca. September/Oktober",
           ziele: [
             "Quadratwurzeln an Beispielen erklären",
             "Begründen, warum z. B. √2 nicht rational ist und der Zahlbereich erweitert werden muss",
@@ -40,6 +41,7 @@ const LEHRPLAN_MATHE_RS_9 = {
         {
           id: "lb2-1",
           titel: "Zentrische Streckung",
+          zeitraum: "ca. Oktober/November",
           ziele: [
             "Zentrische Streckung als Ähnlichkeitsabbildung einordnen und ihre Eigenschaften beschreiben",
             "Punkte und Figuren mit der Abbildungsvorschrift abbilden, ggf. mit Geometriesoftware",
@@ -59,6 +61,7 @@ const LEHRPLAN_MATHE_RS_9 = {
         {
           id: "lb3-1",
           titel: "Rechtwinklige Dreiecke",
+          zeitraum: "ca. November/Dezember",
           ziele: [
             "Aufgaben zu rechtwinkligen Dreiecken mit dem Satz des Pythagoras lösen",
             "Die Umkehrung des Satzes nutzen, um Rechtwinkligkeit nachzuweisen",
@@ -77,6 +80,7 @@ const LEHRPLAN_MATHE_RS_9 = {
         {
           id: "lb4-1",
           titel: "Kreis",
+          zeitraum: "ca. Dezember/Januar",
           ziele: [
             "Zusammenhang zwischen Umfang und Durchmesser sowie Fläche und Radius beschreiben (π ist irrational)",
             "Berechnungen an Kreis, Kreissektor, Kreissegment und zusammengesetzten Figuren durchführen"
@@ -92,6 +96,7 @@ const LEHRPLAN_MATHE_RS_9 = {
         {
           id: "lb5-1",
           titel: "Raumgeometrie",
+          zeitraum: "ca. Januar/Februar",
           ziele: [
             "Das Prinzip von Cavalieri beispielhaft zur Volumenbestimmung nutzen",
             "Oberflächen von Prisma, Pyramide, Zylinder und Kegel anhand von Netzen beschreiben",
@@ -108,6 +113,7 @@ const LEHRPLAN_MATHE_RS_9 = {
         {
           id: "lb6-1",
           titel: "Systeme linearer Gleichungen",
+          zeitraum: "ca. Februar/März",
           ziele: [
             "Lineare Gleichungssysteme mit zwei Variablen grafisch und algebraisch lösen (Einsetzen, Gleichsetzen, Addition)",
             "Lineare Gleichungssysteme bei geometrischen und sachbezogenen Aufgaben anwenden"
@@ -123,6 +129,7 @@ const LEHRPLAN_MATHE_RS_9 = {
         {
           id: "lb7-1",
           titel: "Quadratische Funktionen und quadratische Gleichungen",
+          zeitraum: "ca. März/April",
           ziele: [
             "Parabelgleichungen (allgemeine Form und Scheitelpunktsform) erkennen und Parameter deuten",
             "Zwischen allgemeiner Form und Scheitelpunktsform umformen",
@@ -143,6 +150,7 @@ const LEHRPLAN_MATHE_RS_9 = {
         {
           id: "lb8-1",
           titel: "Daten und Zufall",
+          zeitraum: "ca. Mai/Juni",
           ziele: [
             "Das Gesetz der großen Zahlen anhand von echten oder simulierten Zufallsexperimenten beschreiben",
             "Den Wahrscheinlichkeitsbegriff nach Laplace verwenden",

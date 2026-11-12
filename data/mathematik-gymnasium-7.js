@@ -15,6 +15,7 @@ const LEHRPLAN_MATHE_GY_7 = {
         {
           id: "lb1-1",
           titel: "Aufstellen und Interpretieren von Termen",
+          zeitraum: "ca. September",
           ziele: [
             "Mit Variablen Zusammenhänge kurz und allgemein formulieren",
             "Terme aus Sachsituationen aufstellen und deuten",
@@ -25,6 +26,7 @@ const LEHRPLAN_MATHE_GY_7 = {
         {
           id: "lb1-2",
           titel: "Umformen von Termen",
+          zeitraum: "ca. Oktober/November",
           ziele: [
             "Potenzen mit natürlichen Exponenten zusammenfassen",
             "Terme strukturiert umformen (zusammenfassen, ausmultiplizieren)",
@@ -43,6 +45,7 @@ const LEHRPLAN_MATHE_GY_7 = {
         {
           id: "lb2-1",
           titel: "Achsen- und punktsymmetrische Figuren",
+          zeitraum: "ca. November",
           ziele: [
             "Symmetrische Figuren mit Zirkel und Lineal konstruieren",
             "Mittelsenkrechte, Lot und Winkelhalbierende konstruieren",
@@ -53,6 +56,7 @@ const LEHRPLAN_MATHE_GY_7 = {
         {
           id: "lb2-2",
           titel: "Winkelbetrachtungen an Figuren",
+          zeitraum: "ca. Dezember",
           ziele: [
             "Scheitel-, Neben-, Stufen- und Wechselwinkel benennen",
             "Innenwinkelsumme im Dreieck (180°) begründen",
@@ -70,6 +74,7 @@ const LEHRPLAN_MATHE_GY_7 = {
         {
           id: "lb3-1",
           titel: "Lineare Gleichungen und Vertiefung der Prozentrechnung",
+          zeitraum: "ca. Januar/Februar",
           ziele: [
             "Gleichungen zu Sachfragen aufstellen",
             "Lineare Gleichungen durch Äquivalenzumformung lösen",
@@ -87,6 +92,7 @@ const LEHRPLAN_MATHE_GY_7 = {
         {
           id: "lb4-1",
           titel: "Kenngrößen von Daten",
+          zeitraum: "ca. Februar/März",
           ziele: [
             "Arithmetisches Mittel und Median berechnen und vergleichen",
             "Spannweite und Quartile bestimmen",
@@ -103,6 +109,7 @@ const LEHRPLAN_MATHE_GY_7 = {
         {
           id: "lb5-1",
           titel: "Kongruenz, besondere Dreiecke und Dreieckskonstruktionen",
+          zeitraum: "ca. März bis Mai",
           ziele: [
             "Kongruenz von Figuren erklären",
             "Mit Kongruenzsätzen prüfen, ob ein Dreieck eindeutig konstruierbar ist",

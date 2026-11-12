@@ -24,6 +24,7 @@ const LEHRPLAN_MATHE_RS_10 = {
         {
           id: "lb1-1",
           titel: "Trigonometrie",
+          zeitraum: "ca. Oktober/November",
           ziele: [
             "Sinus, Kosinus und Tangens am Einheitskreis veranschaulichen",
             "Zusammenhänge sin²α + cos²α = 1 und tanα = sinα / cosα nutzen",
@@ -45,6 +46,7 @@ const LEHRPLAN_MATHE_RS_10 = {
         {
           id: "lb2-1",
           titel: "Abbildungen",
+          zeitraum: "ca. Dezember/Januar",
           ziele: [
             "Koordinaten bei Parallelverschiebung, zentrischer Streckung, Achsenspiegelung und Drehung berechnen",
             "Gleichungen von Funktionsgraphen bestimmen, die durch Verschiebung, Streckung oder Spiegelung entstehen",
@@ -61,6 +63,7 @@ const LEHRPLAN_MATHE_RS_10 = {
         {
           id: "lb3-1",
           titel: "Potenzen und Potenzfunktionen",
+          zeitraum: "ca. Januar/Februar",
           ziele: [
             "Potenzen mit rationalen Exponenten berechnen und Potenzgesetze anwenden",
             "n-te Wurzeln in Potenzschreibweise übertragen und umgekehrt",
@@ -77,6 +80,7 @@ const LEHRPLAN_MATHE_RS_10 = {
         {
           id: "lb4-1",
           titel: "Exponentialfunktionen, Logarithmen und Logarithmusfunktionen",
+          zeitraum: "ca. März/April",
           ziele: [
             "Logarithmus als Lösung von aˣ = b verstehen und Logarithmensätze nutzen",
             "Gleichungen und Graphen von Exponential- und Logarithmusfunktionen analysieren",
@@ -93,6 +97,7 @@ const LEHRPLAN_MATHE_RS_10 = {
         {
           id: "lb5-1",
           titel: "Daten und Zufall",
+          zeitraum: "ca. April/Mai",
           ziele: [
             "Mehrstufige Zufallsexperimente mit Baumdiagrammen veranschaulichen",
             "Pfadregeln anwenden, um Wahrscheinlichkeiten von Ergebnissen oder Ereignissen zu berechnen"
