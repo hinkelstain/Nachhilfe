@@ -552,6 +552,72 @@ main {
 
 .arbeitsblatt-row a:hover { text-decoration: underline; }
 
+.arbeitsblatt-typ {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 0.18rem 0.6rem;
+  border-radius: 999px;
+  margin-right: 0.6rem;
+  border: 1px solid transparent;
+  letter-spacing: 0.01em;
+}
+
+.arbeitsblatt-typ.typ-einfuehrung {
+  color: var(--primary-dark);
+  background: var(--primary-light);
+  border-color: var(--primary);
+}
+
+.arbeitsblatt-typ.typ-uebung {
+  color: #8a5a10;
+  background: #faf0dd;
+  border-color: var(--accent);
+}
+
+.arbeitsblatt-typ.typ-experte {
+  color: #8a2f2f;
+  background: #f6e4e0;
+  border-color: #c15b5b;
+}
+
+.arbeitsblaetter-inline {
+  margin-top: 1.5rem;
+}
+
+.arbeitsblaetter-inline h3 {
+  margin: 0 0 0.75rem;
+  color: var(--primary-dark);
+  font-size: 1.05rem;
+}
+
+.arbeitsblaetter-inline-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.arbeitsblatt-row-inline {
+  color: inherit;
+  text-decoration: none;
+  border-radius: 8px;
+  padding: 0.75rem 0.5rem;
+  margin: 0 -0.5rem;
+}
+
+.arbeitsblatt-row-inline:hover {
+  background: var(--primary-light);
+}
+
+.arbeitsblatt-row-inline .arbeitsblatt-titel {
+  font-weight: 600;
+}
+
+.arbeitsblatt-row-inline .arbeitsblatt-oeffnen {
+  color: var(--primary);
+  font-weight: 600;
+  white-space: nowrap;
+}
+
 .uebung-box {
   text-align: center;
   padding: 1.5rem 1rem;

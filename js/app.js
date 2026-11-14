@@ -347,6 +347,8 @@ function renderUebersichtTab(container) {
     container.appendChild(toggle);
   }
 
+  renderArbeitsblaetterInline(container, fachData, lb.id);
+
   container.querySelectorAll(".status-btn").forEach((btn) => {
     const id = btn.dataset.id;
     updateStatusButton(btn, getStatus(id));
@@ -404,6 +406,28 @@ function renderZielDetail(container, lernbereiche) {
   });
 }
 
+// ---------- Arbeitsblätter: gemeinsame Helfer ----------
+const ARBEITSBLATT_TYP_LABELS = {
+  einfuehrung: { label: "Einführung", className: "typ-einfuehrung" },
+  uebung: { label: "Üben", className: "typ-uebung" },
+  experte: { label: "Experte", className: "typ-experte" }
+};
+const ARBEITSBLATT_TYP_ORDER = ["einfuehrung", "uebung", "experte"];
+
+function arbeitsblattTypBadge(typ) {
+  const meta = ARBEITSBLATT_TYP_LABELS[typ];
+  if (!meta) return "";
+  return `<span class="arbeitsblatt-typ ${meta.className}">${meta.label}</span>`;
+}
+
+function sortedArbeitsblaetter(liste) {
+  return [...liste].sort((a, b) => {
+    const ia = ARBEITSBLATT_TYP_ORDER.indexOf(a.typ);
+    const ib = ARBEITSBLATT_TYP_ORDER.indexOf(b.typ);
+    return (ia === -1 ? 99 : ia) - (ib === -1 ? 99 : ib);
+  });
+}
+
 // ---------- Tab: Arbeitsblätter ----------
 function renderArbeitsblaetterTab(container) {
   const fachData = currentFachData();
@@ -424,16 +448,42 @@ function renderArbeitsblaetterTab(container) {
 
   const panel = document.createElement("div");
   panel.className = "panel";
-  liste.forEach((ab) => {
+  sortedArbeitsblaetter(liste).forEach((ab) => {
     const row = document.createElement("div");
     row.className = "arbeitsblatt-row";
     row.innerHTML = `
-      <div><span class="arbeitsblatt-tag">${titelById[ab.lernbereich] || ab.lernbereich}</span>${ab.titel}</div>
+      <div><span class="arbeitsblatt-tag">${titelById[ab.lernbereich] || ab.lernbereich}</span>${arbeitsblattTypBadge(ab.typ)}${ab.titel}</div>
       <a href="${ab.datei}" target="_blank" rel="noopener">Öffnen ↗</a>
     `;
     panel.appendChild(row);
   });
   container.appendChild(panel);
+}
+
+// ---------- Arbeitsblätter zu einem einzelnen Thema (Lernbereich) ----------
+function renderArbeitsblaetterInline(container, fachData, lernbereichId) {
+  const liste = (fachData.arbeitsblaetter || []).filter((ab) => ab.lernbereich === lernbereichId);
+  if (liste.length === 0) return;
+
+  const wrap = document.createElement("div");
+  wrap.className = "panel arbeitsblaetter-inline";
+  wrap.innerHTML = `<h3>Arbeitsblätter zu diesem Thema</h3>`;
+  const list = document.createElement("div");
+  list.className = "arbeitsblaetter-inline-list";
+  sortedArbeitsblaetter(liste).forEach((ab) => {
+    const row = document.createElement("a");
+    row.className = "arbeitsblatt-row arbeitsblatt-row-inline";
+    row.href = ab.datei;
+    row.target = "_blank";
+    row.rel = "noopener";
+    row.innerHTML = `
+      <div>${arbeitsblattTypBadge(ab.typ)}<span class="arbeitsblatt-titel">${ab.titel}</span></div>
+      <span class="arbeitsblatt-oeffnen">Öffnen ↗</span>
+    `;
+    list.appendChild(row);
+  });
+  wrap.appendChild(list);
+  container.appendChild(wrap);
 }
 
 // ---------- Tab: Übungen ----------
