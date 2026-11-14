@@ -347,8 +347,6 @@ function renderUebersichtTab(container) {
     container.appendChild(toggle);
   }
 
-  renderArbeitsblaetterInline(container, fachData, lb.id);
-
   container.querySelectorAll(".status-btn").forEach((btn) => {
     const id = btn.dataset.id;
     updateStatusButton(btn, getStatus(id));
@@ -393,7 +391,6 @@ function renderZielDetail(container, lernbereiche) {
     <p class="ziel-kontext">${lb.titel} · ${tb.titel}</p>
     <h2 class="step-title">${zielText}</h2>
     <button class="status-btn" data-id="${zielId}"></button>
-    <p class="hint ziel-placeholder">Hier können später z. B. passende Arbeitsblätter oder Übungen genau zu diesem Lernziel ergänzt werden.</p>
   `;
   container.appendChild(panel);
 
@@ -404,6 +401,8 @@ function renderZielDetail(container, lernbereiche) {
     setStatus(zielId, next);
     updateStatusButton(btn, next);
   });
+
+  renderArbeitsblaetterZuZiel(container, currentFachData(), zielId);
 }
 
 // ---------- Arbeitsblätter: gemeinsame Helfer ----------
@@ -428,6 +427,23 @@ function sortedArbeitsblaetter(liste) {
   });
 }
 
+// Arbeitsblätter hängen an einem einzelnen Lernziel (Feld "tb" = Teilbereich-ID,
+// "zi" = Index des Ziels in dessen ziele-Array, 0-basiert). zielId im selben
+// Format wie in renderZielDetail ("<teilbereichId>-z<laufendeNummerAb1>").
+function arbeitsblattZielId(ab) {
+  return `${ab.tb}-z${ab.zi + 1}`;
+}
+
+// Liefert { lernbereichTitel, teilbereichTitel } zu einem Arbeitsblatt, für
+// die Kontext-Anzeige in der Arbeitsblätter-Übersicht.
+function arbeitsblattKontext(lernbereiche, ab) {
+  for (const lb of lernbereiche) {
+    const tb = lb.teilbereiche.find((t) => t.id === ab.tb);
+    if (tb) return { lernbereichTitel: lb.titel, teilbereichTitel: tb.titel };
+  }
+  return { lernbereichTitel: ab.tb, teilbereichTitel: "" };
+}
+
 // ---------- Tab: Arbeitsblätter ----------
 function renderArbeitsblaetterTab(container) {
   const fachData = currentFachData();
@@ -443,16 +459,16 @@ function renderArbeitsblaetterTab(container) {
     return;
   }
 
-  const titelById = {};
-  fachData.lehrplan.lernbereiche.forEach((lb) => (titelById[lb.id] = lb.titel));
+  const lernbereiche = fachData.lehrplan.lernbereiche;
 
   const panel = document.createElement("div");
   panel.className = "panel";
   sortedArbeitsblaetter(liste).forEach((ab) => {
+    const { lernbereichTitel, teilbereichTitel } = arbeitsblattKontext(lernbereiche, ab);
     const row = document.createElement("div");
     row.className = "arbeitsblatt-row";
     row.innerHTML = `
-      <div><span class="arbeitsblatt-tag">${titelById[ab.lernbereich] || ab.lernbereich}</span>${arbeitsblattTypBadge(ab.typ)}${ab.titel}</div>
+      <div><span class="arbeitsblatt-tag">${lernbereichTitel} · ${teilbereichTitel}</span>${arbeitsblattTypBadge(ab.typ)}${ab.titel}</div>
       <a href="${ab.datei}" target="_blank" rel="noopener">Öffnen ↗</a>
     `;
     panel.appendChild(row);
@@ -460,14 +476,20 @@ function renderArbeitsblaetterTab(container) {
   container.appendChild(panel);
 }
 
-// ---------- Arbeitsblätter zu einem einzelnen Thema (Lernbereich) ----------
-function renderArbeitsblaetterInline(container, fachData, lernbereichId) {
-  const liste = (fachData.arbeitsblaetter || []).filter((ab) => ab.lernbereich === lernbereichId);
-  if (liste.length === 0) return;
+// ---------- Arbeitsblätter zu einem einzelnen Lernziel ----------
+function renderArbeitsblaetterZuZiel(container, fachData, zielId) {
+  const liste = (fachData.arbeitsblaetter || []).filter((ab) => arbeitsblattZielId(ab) === zielId);
+  if (liste.length === 0) {
+    const hint = document.createElement("p");
+    hint.className = "hint ziel-placeholder";
+    hint.textContent = "Hier können später z. B. passende Arbeitsblätter oder Übungen genau zu diesem Lernziel ergänzt werden.";
+    container.appendChild(hint);
+    return;
+  }
 
   const wrap = document.createElement("div");
   wrap.className = "panel arbeitsblaetter-inline";
-  wrap.innerHTML = `<h3>Arbeitsblätter zu diesem Thema</h3>`;
+  wrap.innerHTML = `<h3>Arbeitsblätter zu diesem Lernziel</h3>`;
   const list = document.createElement("div");
   list.className = "arbeitsblaetter-inline-list";
   sortedArbeitsblaetter(liste).forEach((ab) => {

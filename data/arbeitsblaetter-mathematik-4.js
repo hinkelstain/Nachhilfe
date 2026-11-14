@@ -1,30 +1,35 @@
 // Arbeitsblätter für Mathematik Klasse 3/4.
-// Neues Arbeitsblatt hinzufügen: PDF in den Ordner "arbeitsblaetter/" legen,
-// dann hier unten ein neues Objekt in die Liste eintragen. lernbereich muss
-// zu einer der IDs aus mathematik-4.js passen (lb1, lb2, lb3, lb4).
+// Arbeitsblätter hängen an einem einzelnen Lernziel, nicht am ganzen Thema:
+// "tb" ist die ID des Teilbereichs (aus mathematik-4.js, z. B. "lb1-1"),
+// "zi" ist der Index (0-basiert!) des Lernziels in dessen ziele-Array.
+// Auf der Website erscheinen sie, wenn man das jeweilige Lernziel anklickt.
 // typ steuert Reihenfolge/Badge-Farbe: "einfuehrung" | "uebung" | "experte".
 //
-// Pro Thema (Lernbereich) gibt es ein Dreier-Set: Einführungsblatt,
-// Übungsblatt (einfach bis mittelschwer) und Expertenblatt. Erzeugt mit
-// einem HTML->PDF-Generator (Playwright), siehe Kommentar in jeder PDF selbst
-// nicht enthalten, aber die Quelltexte liegen als Referenz im Projektverlauf.
+// Pro Lernziel gibt es ein Dreier-Set: Einführungsblatt, Übungsblatt
+// (einfach bis mittelschwer) und Expertenblatt. Erzeugt mit einem
+// HTML->PDF-Generator (Playwright), Design an die Website-Farbpalette
+// angelehnt; die Generator-Quelle liegt nicht im Repo, nur die fertigen PDFs.
 const ARBEITSBLAETTER_MATHE_4 = [
+  // lb1-1, Ziel 1: "Sich im Zahlenraum bis zur Million orientieren ..."
   {
-    titel: "Einführung: Zahlen und Operationen",
+    titel: "Einführung: Orientierung im Zahlenraum bis zur Million",
     typ: "einfuehrung",
-    lernbereich: "lb1",
-    datei: "arbeitsblaetter/mathe4-lb1-einfuehrung.pdf"
+    tb: "lb1-1",
+    zi: 0,
+    datei: "arbeitsblaetter/mathe4-lb1-1-z1-einfuehrung.pdf"
   },
   {
-    titel: "Üben: Zahlen und Operationen",
+    titel: "Üben: Orientierung im Zahlenraum bis zur Million",
     typ: "uebung",
-    lernbereich: "lb1",
-    datei: "arbeitsblaetter/mathe4-lb1-uebung.pdf"
+    tb: "lb1-1",
+    zi: 0,
+    datei: "arbeitsblaetter/mathe4-lb1-1-z1-uebung.pdf"
   },
   {
-    titel: "Experten-Aufgaben: Zahlen und Operationen",
+    titel: "Experten-Aufgaben: Orientierung im Zahlenraum bis zur Million",
     typ: "experte",
-    lernbereich: "lb1",
-    datei: "arbeitsblaetter/mathe4-lb1-experte.pdf"
+    tb: "lb1-1",
+    zi: 0,
+    datei: "arbeitsblaetter/mathe4-lb1-1-z1-experte.pdf"
   }
 ];
