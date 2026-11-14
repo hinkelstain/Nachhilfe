@@ -67,11 +67,26 @@ const CURRICULA = {
       }
     },
     mittelschule: {
-      "5": { mathematik: { label: "Mathematik", lehrplan: LEHRPLAN_MATHE_MS_5, arbeitsblaetter: [] } },
-      "6": { mathematik: { label: "Mathematik", lehrplan: LEHRPLAN_MATHE_MS_6, arbeitsblaetter: [] } },
-      "7": { mathematik: { label: "Mathematik", lehrplan: LEHRPLAN_MATHE_MS_7, arbeitsblaetter: [] } },
-      "8": { mathematik: { label: "Mathematik", lehrplan: LEHRPLAN_MATHE_MS_8, arbeitsblaetter: [] } },
-      "9": { mathematik: { label: "Mathematik", lehrplan: LEHRPLAN_MATHE_MS_9, arbeitsblaetter: [] } }
+      "5": {
+        mathematik: { label: "Mathematik", lehrplan: LEHRPLAN_MATHE_MS_5, arbeitsblaetter: [] },
+        gpg: { label: "GPG (Geschichte/Politik/Geographie)", lehrplan: LEHRPLAN_GPG_MS_5, arbeitsblaetter: [] }
+      },
+      "6": {
+        mathematik: { label: "Mathematik", lehrplan: LEHRPLAN_MATHE_MS_6, arbeitsblaetter: [] },
+        gpg: { label: "GPG (Geschichte/Politik/Geographie)", lehrplan: LEHRPLAN_GPG_MS_6, arbeitsblaetter: [] }
+      },
+      "7": {
+        mathematik: { label: "Mathematik", lehrplan: LEHRPLAN_MATHE_MS_7, arbeitsblaetter: [] },
+        gpg: { label: "GPG (Geschichte/Politik/Geographie)", lehrplan: LEHRPLAN_GPG_MS_7, arbeitsblaetter: [] }
+      },
+      "8": {
+        mathematik: { label: "Mathematik", lehrplan: LEHRPLAN_MATHE_MS_8, arbeitsblaetter: [] },
+        gpg: { label: "GPG (Geschichte/Politik/Geographie)", lehrplan: LEHRPLAN_GPG_MS_8, arbeitsblaetter: [] }
+      },
+      "9": {
+        mathematik: { label: "Mathematik", lehrplan: LEHRPLAN_MATHE_MS_9, arbeitsblaetter: [] },
+        gpg: { label: "GPG (Geschichte/Politik/Geographie)", lehrplan: LEHRPLAN_GPG_MS_9, arbeitsblaetter: [] }
+      }
     },
     realschule: {
       "5": { mathematik: { label: "Mathematik", lehrplan: LEHRPLAN_MATHE_RS_5, arbeitsblaetter: [] } },
