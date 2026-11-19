@@ -597,15 +597,59 @@ main {
 }
 
 .arbeitsblatt-row-inline {
-  color: inherit;
-  text-decoration: none;
-  border-radius: 8px;
-  padding: 0.75rem 0.5rem;
-  margin: 0 -0.5rem;
+  padding: 0.35rem 0;
+  gap: 0.6rem;
 }
 
-.arbeitsblatt-row-inline:hover {
+.arbeitsblatt-row-inline a.arbeitsblatt-main {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  color: inherit;
+  font-weight: inherit;
+  text-decoration: none;
+  border-radius: 8px;
+  padding: 0.6rem 0.5rem;
+  margin-left: -0.5rem;
+}
+
+.arbeitsblatt-row-inline a.arbeitsblatt-main:hover {
   background: var(--primary-light);
+  text-decoration: none;
+}
+
+.arbeitsblatt-links {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  white-space: nowrap;
+}
+
+/* Lösungsknopf neben jedem Arbeitsblatt */
+.arbeitsblatt-row a.arbeitsblatt-loesung {
+  flex: none;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #2c4a6b;
+  background: #e8eef5;
+  border: 1px solid #9fb3c8;
+  border-radius: 999px;
+  padding: 0.3rem 0.85rem;
+  white-space: nowrap;
+}
+
+.arbeitsblatt-row a.arbeitsblatt-loesung:hover {
+  background: #d6e2ee;
+  text-decoration: none;
+}
+
+@media (max-width: 600px) {
+  .arbeitsblatt-row-inline { flex-wrap: wrap; row-gap: 0.1rem; }
+  .arbeitsblatt-row-inline a.arbeitsblatt-main { flex: 1 1 100%; margin-right: -0.5rem; }
+  .arbeitsblatt-row-inline a.arbeitsblatt-loesung { margin: 0 0 0.35rem auto; }
+  .arbeitsblatt-row .arbeitsblatt-links { flex-wrap: wrap; justify-content: flex-end; }
 }
 
 .arbeitsblatt-row-inline .arbeitsblatt-titel {

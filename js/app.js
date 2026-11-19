@@ -444,6 +444,13 @@ function arbeitsblattKontext(lernbereiche, ab) {
   return { lernbereichTitel: ab.tb, teilbereichTitel: "" };
 }
 
+// Lösungsknopf: erscheint nur, wenn zum Arbeitsblatt eine Lösungs-PDF
+// hinterlegt ist (Feld "loesung" im Eintrag der arbeitsblaetter-*.js).
+function loesungsKnopf(ab) {
+  if (!ab.loesung) return "";
+  return `<a class="arbeitsblatt-loesung" href="${ab.loesung}" target="_blank" rel="noopener">Lösung</a>`;
+}
+
 // ---------- Tab: Arbeitsblätter ----------
 function renderArbeitsblaetterTab(container) {
   const fachData = currentFachData();
@@ -469,7 +476,10 @@ function renderArbeitsblaetterTab(container) {
     row.className = "arbeitsblatt-row";
     row.innerHTML = `
       <div><span class="arbeitsblatt-tag">${lernbereichTitel} · ${teilbereichTitel}</span>${arbeitsblattTypBadge(ab.typ)}${ab.titel}</div>
-      <a href="${ab.datei}" target="_blank" rel="noopener">Öffnen ↗</a>
+      <div class="arbeitsblatt-links">
+        <a href="${ab.datei}" target="_blank" rel="noopener">Öffnen ↗</a>
+        ${loesungsKnopf(ab)}
+      </div>
     `;
     panel.appendChild(row);
   });
@@ -493,14 +503,14 @@ function renderArbeitsblaetterZuZiel(container, fachData, zielId) {
   const list = document.createElement("div");
   list.className = "arbeitsblaetter-inline-list";
   sortedArbeitsblaetter(liste).forEach((ab) => {
-    const row = document.createElement("a");
+    const row = document.createElement("div");
     row.className = "arbeitsblatt-row arbeitsblatt-row-inline";
-    row.href = ab.datei;
-    row.target = "_blank";
-    row.rel = "noopener";
     row.innerHTML = `
-      <div>${arbeitsblattTypBadge(ab.typ)}<span class="arbeitsblatt-titel">${ab.titel}</span></div>
-      <span class="arbeitsblatt-oeffnen">Öffnen ↗</span>
+      <a class="arbeitsblatt-main" href="${ab.datei}" target="_blank" rel="noopener">
+        <div>${arbeitsblattTypBadge(ab.typ)}<span class="arbeitsblatt-titel">${ab.titel}</span></div>
+        <span class="arbeitsblatt-oeffnen">Öffnen ↗</span>
+      </a>
+      ${loesungsKnopf(ab)}
     `;
     list.appendChild(row);
   });
