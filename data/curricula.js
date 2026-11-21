@@ -80,7 +80,7 @@ const CURRICULA = {
         gpg: { label: "GPG (Geschichte/Politik/Geographie)", lehrplan: LEHRPLAN_GPG_MS_7, arbeitsblaetter: [] }
       },
       "8": {
-        mathematik: { label: "Mathematik", lehrplan: LEHRPLAN_MATHE_MS_8, arbeitsblaetter: [] },
+        mathematik: { label: "Mathematik", lehrplan: LEHRPLAN_MATHE_MS_8, arbeitsblaetter: ARBEITSBLAETTER_MATHE_MS_8 },
         gpg: { label: "GPG (Geschichte/Politik/Geographie)", lehrplan: LEHRPLAN_GPG_MS_8, arbeitsblaetter: [] }
       },
       "9": {
