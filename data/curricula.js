@@ -123,7 +123,8 @@ const CURRICULA = {
       },
       "8": {
         mathematik: { label: "Mathematik", lehrplan: LEHRPLAN_MATHE_GY_8, arbeitsblaetter: ARBEITSBLAETTER_MATHE_GY_8 },
-        geschichte: { label: "Geschichte", lehrplan: LEHRPLAN_GESCHICHTE_GY_8, arbeitsblaetter: ARBEITSBLAETTER_GESCHICHTE_GY_8 }
+        geschichte: { label: "Geschichte", lehrplan: LEHRPLAN_GESCHICHTE_GY_8, arbeitsblaetter: ARBEITSBLAETTER_GESCHICHTE_GY_8 },
+        englisch: { label: "Englisch", lehrplan: LEHRPLAN_ENGLISCH_GY_8, arbeitsblaetter: [] }
       },
       "9": {
         mathematik: { label: "Mathematik", lehrplan: LEHRPLAN_MATHE_GY_9, arbeitsblaetter: [] },
