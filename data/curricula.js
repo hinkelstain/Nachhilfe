@@ -107,7 +107,7 @@ const CURRICULA = {
         geschichte: { label: "Geschichte", lehrplan: LEHRPLAN_GESCHICHTE_RS_9, arbeitsblaetter: [] }
       },
       "10": {
-        mathematik: { label: "Mathematik", lehrplan: LEHRPLAN_MATHE_RS_10, arbeitsblaetter: [] },
+        mathematik: { label: "Mathematik", lehrplan: LEHRPLAN_MATHE_RS_10, arbeitsblaetter: ARBEITSBLAETTER_MATHE_RS_10 },
         geschichte: { label: "Geschichte", lehrplan: LEHRPLAN_GESCHICHTE_RS_10, arbeitsblaetter: [] }
       }
     },
