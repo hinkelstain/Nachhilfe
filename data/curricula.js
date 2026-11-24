@@ -91,7 +91,7 @@ const CURRICULA = {
     realschule: {
       "5": { mathematik: { label: "Mathematik", lehrplan: LEHRPLAN_MATHE_RS_5, arbeitsblaetter: ARBEITSBLAETTER_MATHE_RS_5 } },
       "6": {
-        mathematik: { label: "Mathematik", lehrplan: LEHRPLAN_MATHE_RS_6, arbeitsblaetter: [] },
+        mathematik: { label: "Mathematik", lehrplan: LEHRPLAN_MATHE_RS_6, arbeitsblaetter: ARBEITSBLAETTER_MATHE_RS_6 },
         geschichte: { label: "Geschichte", lehrplan: LEHRPLAN_GESCHICHTE_RS_6, arbeitsblaetter: [] }
       },
       "7": {
