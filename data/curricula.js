@@ -69,7 +69,7 @@ const CURRICULA = {
     mittelschule: {
       "5": {
         mathematik: { label: "Mathematik", lehrplan: LEHRPLAN_MATHE_MS_5, arbeitsblaetter: ARBEITSBLAETTER_MATHE_MS_5 },
-        gpg: { label: "GPG (Geschichte/Politik/Geographie)", lehrplan: LEHRPLAN_GPG_MS_5, arbeitsblaetter: [] }
+        gpg: { label: "GPG (Geschichte/Politik/Geographie)", lehrplan: LEHRPLAN_GPG_MS_5, arbeitsblaetter: ARBEITSBLAETTER_GPG_MS_5 }
       },
       "6": {
         mathematik: { label: "Mathematik", lehrplan: LEHRPLAN_MATHE_MS_6, arbeitsblaetter: ARBEITSBLAETTER_MATHE_MS_6 },
